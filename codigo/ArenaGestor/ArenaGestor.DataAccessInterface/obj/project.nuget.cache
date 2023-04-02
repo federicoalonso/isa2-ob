@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "PnmiwiJZjmRNOhBtGJ8APC4Rg4YpNLN7Q67Lxh+CEbhdMwh5QMY1hJKXRPWI9afPrv68mi+OAAwV5EWGFAXFVw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\fnico\\Documents\\GitHub\\isa2-ob\\codigo\\ArenaGestor\\ArenaGestor.DataAccessInterface\\ArenaGestor.DataAccessInterface.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\fnico\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\fnico\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\fnico\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

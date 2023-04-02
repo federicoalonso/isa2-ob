@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "qi+2g5DY4505I/BIBd9eA2FISvaSw3rknsx/tsEeC2+YXf8CwfDah6edpvNHHNSiHCy/r8JjrGd/p+OzkdOhVQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\fnico\\Documents\\GitHub\\isa2-ob\\codigo\\ArenaGestor\\ArenaGestor.Extensions\\ArenaGestor.Extensions.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\fnico\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\fnico\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\fnico\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
