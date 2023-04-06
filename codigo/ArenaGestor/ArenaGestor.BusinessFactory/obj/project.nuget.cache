@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PdvUZ0dCwYHjar5hSqaeW8DUSEwn5lKphQd5ksDeBLUZWOnzDrmmoM8KBXiV3KSFZzIULXhfllj7jts0hjmKRA==",
+  "dgSpecHash": "ez/BCozosoinF787rbGVaVBdP7sDgbWACfO21SVpeCL9+JLpkp15Ipp6XhO+NZuheKab/ylqHnNz7vYVadfNnw==",
   "success": true,
   "projectFilePath": "C:\\Users\\fnico\\Documents\\GitHub\\isa2-ob\\codigo\\ArenaGestor\\ArenaGestor.BusinessFactory\\ArenaGestor.BusinessFactory.csproj",
   "expectedPackageFiles": [
@@ -14,10 +14,7 @@
     "C:\\Users\\fnico\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\5.0.0\\microsoft.extensions.fileproviders.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\fnico\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\5.0.0\\microsoft.extensions.fileproviders.physical.5.0.0.nupkg.sha512",
     "C:\\Users\\fnico\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\5.0.0\\microsoft.extensions.filesystemglobbing.5.0.0.nupkg.sha512",
-    "C:\\Users\\fnico\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
-    "C:\\Users\\fnico\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\fnico\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\fnico\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
+    "C:\\Users\\fnico\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

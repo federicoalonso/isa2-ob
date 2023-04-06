@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NNHH+csd4ihl5V5L1HX83xKBF7Q1+hiQsWUFXebDC575LX1PnpENOzrm00FBtw0Vqc5cI9RRqzWa1l6e/uuLtA==",
+  "dgSpecHash": "hZppQLnbjm4Od8E2p7aA95LGPAu21Vi3KBh98qMYFAwJM8nMBEpmBsg7laN7/7vvgwvbu+vMGqOq/z15nzdLTA==",
   "success": true,
   "projectFilePath": "C:\\Users\\fnico\\Documents\\GitHub\\isa2-ob\\codigo\\ArenaGestor\\ArenaGestor.BusinessHelpers\\ArenaGestor.BusinessHelpers.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\fnico\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\fnico\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\fnico\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

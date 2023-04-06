@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uSBTosbnphBaHOaQzpw3dhOmpv7jr3t7xTYlXj8LepyN7bUBTFN3iSOHHe8soLCdnkAA78UavUNZ90RHKRMKEQ==",
+  "dgSpecHash": "DTYondpJRPGU+koEM4GTLhsmyGskaHx5dL6xkRHQlEypV9tXsc5X2fO34EtIZokQzA54G/ehlyU7XVm7Z80iNg==",
   "success": true,
   "projectFilePath": "C:\\Users\\fnico\\Documents\\GitHub\\isa2-ob\\codigo\\ArenaGestor\\ArenaGestor.APIContracts\\ArenaGestor.APIContracts.csproj",
   "expectedPackageFiles": [
@@ -76,10 +76,7 @@
     "C:\\Users\\fnico\\.nuget\\packages\\system.threading.tasks\\4.0.11\\system.threading.tasks.4.0.11.nupkg.sha512",
     "C:\\Users\\fnico\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.1\\system.threading.tasks.extensions.4.5.1.nupkg.sha512",
     "C:\\Users\\fnico\\.nuget\\packages\\system.xml.readerwriter\\4.0.11\\system.xml.readerwriter.4.0.11.nupkg.sha512",
-    "C:\\Users\\fnico\\.nuget\\packages\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512",
-    "C:\\Users\\fnico\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\fnico\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\fnico\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
+    "C:\\Users\\fnico\\.nuget\\packages\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512"
   ],
   "logs": []
 }

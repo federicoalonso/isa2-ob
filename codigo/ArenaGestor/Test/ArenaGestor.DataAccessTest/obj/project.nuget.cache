@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OblCoZoFlAHbEFcambTMeJmYpbWcJoDwyaImJPATkGz9w0Bo2ZDQoIV0z787ZtEjP2Rl/ZvhKCKABZR7LeNEkw==",
+  "dgSpecHash": "LS3Z/SwT4MBvWuWlH+udWqehyRtG9LwF8Rs7tq2bpt9DitxLQrgBsZVvdJl8qqnWo74LVc5xeqNphynL56mA3g==",
   "success": true,
   "projectFilePath": "C:\\Users\\fnico\\Documents\\GitHub\\isa2-ob\\codigo\\ArenaGestor\\Test\\ArenaGestor.DataAccessTest\\ArenaGestor.DataAccessTest.csproj",
   "expectedPackageFiles": [
@@ -147,10 +147,7 @@
     "C:\\Users\\fnico\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\fnico\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\fnico\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\fnico\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\fnico\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\fnico\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\fnico\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
+    "C:\\Users\\fnico\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }
