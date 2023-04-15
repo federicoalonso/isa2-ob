@@ -52,4 +52,4 @@ jobs:
         host: ${{ secrets.SONARQUBE_HOST }}
         login: ${{ secrets.SONARQUBE_TOKEN }}
         projectBaseDir: "codigo/ArenaGestor/"
-        projectKey: "isa2"
+        projectKey: "isa2-back"
