@@ -45,3 +45,11 @@ jobs:
         path: '**/test-results.trx'
         reporter: dotnet-trx
         fail-on-error: true
+
+    - name: SonarQube Scan
+      uses: kitabisa/sonarqube-action@v1.2.0
+      with:
+        host: ${{ secrets.SONARQUBE_HOST }}
+        login: ${{ secrets.SONARQUBE_TOKEN }}
+        projectBaseDir: $PATH_CODE
+        projectKey: "isa2"
