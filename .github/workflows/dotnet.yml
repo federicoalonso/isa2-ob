@@ -46,10 +46,19 @@ jobs:
         reporter: dotnet-trx
         fail-on-error: true
 
-    - name: SonarQube Scan
-      uses: kitabisa/sonarqube-action@v1.2.0
+    - name: Depcheck
+      uses: dependency-check/Dependency-Check_Action@main
+      id: Depcheck
       with:
-        host: ${{ secrets.SONARQUBE_HOST }}
-        login: ${{ secrets.SONARQUBE_TOKEN }}
-        projectBaseDir: "codigo/ArenaGestor/"
-        projectKey: "isa2-back"
+        project: 'ArenaGestor'
+        path: 'codigo/ArenaGestor/'
+        format: 'HTML'
+        out: 'reports'
+        args: >
+          --failOnCVSS 7
+          --enableRetired
+    - name: Upload Test results
+      uses: actions/upload-artifact@master
+      with:
+          name: Depcheck report
+          path: ${{github.workspace}}/reports
