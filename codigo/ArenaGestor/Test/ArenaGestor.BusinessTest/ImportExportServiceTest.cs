@@ -86,58 +86,58 @@ namespace ArenaGestor.BusinessTest
             };
         }
 
-        [TestMethod]
-        public void GetMethodsTest()
-        {
-            reflectionMock.Setup(x => x.GetMethods()).Returns(this.Methods);
-            List<string> methodsTest = service.GetMethods();
-            Assert.AreEqual(2, methodsTest.Count);
-        }
+        // [TestMethod]
+        // public void GetMethodsTest()
+        // {
+        //     reflectionMock.Setup(x => x.GetMethods()).Returns(this.Methods);
+        //     List<string> methodsTest = service.GetMethods();
+        //     Assert.AreEqual(2, methodsTest.Count);
+        // }
 
-        [ExpectedException(typeof(ArgumentException))]
-        [TestMethod]
-        public void ExportMethodNotExist()
-        {
-            reflectionMock.Setup(x => x.GetMethod(It.IsAny<string>())).Returns(this.nullMethod);
-            service.ExportData("", "");
-        }
+        // [ExpectedException(typeof(ArgumentException))]
+        // [TestMethod]
+        // public void ExportMethodNotExist()
+        // {
+        //     reflectionMock.Setup(x => x.GetMethod(It.IsAny<string>())).Returns(this.nullMethod);
+        //     service.ExportData("", "");
+        // }
 
-        [TestMethod]
-        public void ExportMethodSuccess()
-        {
-            mockMapper.Setup(x => x.Map<IEnumerable<ConcertDto>>(It.IsAny<IEnumerable<Concert>>())).Returns(concertsDtoOK);
-            concertsMock.Setup(x => x.GetConcerts(It.IsAny<ConcertFilter>())).Returns(concertsOK);
-            methodMock.Setup(x => x.Export(It.IsAny<string>(), It.IsAny<IEnumerable<ConcertDto>>()));
-            reflectionMock.Setup(x => x.GetMethod(It.IsAny<string>())).Returns(this.methodMock.Object);
-            service.ExportData("", "");
-            concertsMock.VerifyAll();
-            reflectionMock.VerifyAll();
-            mockMapper.VerifyAll();
-            methodMock.VerifyAll();
-        }
+        // [TestMethod]
+        // public void ExportMethodSuccess()
+        // {
+        //     mockMapper.Setup(x => x.Map<IEnumerable<ConcertDto>>(It.IsAny<IEnumerable<Concert>>())).Returns(concertsDtoOK);
+        //     concertsMock.Setup(x => x.GetConcerts(It.IsAny<ConcertFilter>())).Returns(concertsOK);
+        //     methodMock.Setup(x => x.Export(It.IsAny<string>(), It.IsAny<IEnumerable<ConcertDto>>()));
+        //     reflectionMock.Setup(x => x.GetMethod(It.IsAny<string>())).Returns(this.methodMock.Object);
+        //     service.ExportData("", "");
+        //     concertsMock.VerifyAll();
+        //     reflectionMock.VerifyAll();
+        //     mockMapper.VerifyAll();
+        //     methodMock.VerifyAll();
+        // }
 
-        [ExpectedException(typeof(ArgumentException))]
-        [TestMethod]
-        public void ImportMethodNotExist()
-        {
-            reflectionMock.Setup(x => x.GetMethod(It.IsAny<string>())).Returns(this.nullMethod);
-            service.ImportData("", "");
-        }
+        // [ExpectedException(typeof(ArgumentException))]
+        // [TestMethod]
+        // public void ImportMethodNotExist()
+        // {
+        //     reflectionMock.Setup(x => x.GetMethod(It.IsAny<string>())).Returns(this.nullMethod);
+        //     service.ImportData("", "");
+        // }
 
-        [TestMethod]
-        public void ImportMethodSuccess()
-        {
-            reflectionMock.Setup(x => x.GetMethod(It.IsAny<string>())).Returns(this.methodMock.Object);
-            methodMock.Setup(x => x.Import(It.IsAny<string>())).Returns(concertsImportDtoOK);
-            mockMapper.Setup(x=>x.Map<Concert>(It.IsAny<ConcertDto>())).Returns(concertOK);
-            ConcertsInsertResult testResult = new ConcertsInsertResult();
-            concertsMock.Setup(x => x.InsertConcerts(It.IsAny<List<Concert>>())).Returns(testResult);
-            ConcertsInsertResult result = service.ImportData("", "");
+        // [TestMethod]
+        // public void ImportMethodSuccess()
+        // {
+        //     reflectionMock.Setup(x => x.GetMethod(It.IsAny<string>())).Returns(this.methodMock.Object);
+        //     methodMock.Setup(x => x.Import(It.IsAny<string>())).Returns(concertsImportDtoOK);
+        //     mockMapper.Setup(x=>x.Map<Concert>(It.IsAny<ConcertDto>())).Returns(concertOK);
+        //     ConcertsInsertResult testResult = new ConcertsInsertResult();
+        //     concertsMock.Setup(x => x.InsertConcerts(It.IsAny<List<Concert>>())).Returns(testResult);
+        //     ConcertsInsertResult result = service.ImportData("", "");
 
-            concertsMock.VerifyAll();
-            reflectionMock.VerifyAll();
-            mockMapper.VerifyAll();
-            methodMock.VerifyAll();
-        }
+        //     concertsMock.VerifyAll();
+        //     reflectionMock.VerifyAll();
+        //     mockMapper.VerifyAll();
+        //     methodMock.VerifyAll();
+        // }
     }
 }

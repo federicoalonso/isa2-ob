@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    name: Build and Test
+    name: Build and Test and Check Dependencies
 
     env:
       SOLUTION: 'ArenaGestor.sln'
@@ -19,22 +19,23 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    permissions:
-      id-token: write
-      contents: read
-      checks: write
+    permissions: write-all
 
     steps:
     - uses: actions/checkout@v3
+
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 5.0.x
+
     - name: Restore dependencies
       run: dotnet restore $PATH_CODE/$SOLUTION
+
     - name: Build
       run: dotnet build --no-restore $PATH_CODE/$SOLUTION
-    - name: Test API
+
+    - name: Test Backend
       run: dotnet test --no-build --verbosity normal $PATH_CODE/$SOLUTION --logger "trx;LogFileName=test-results.trx" --collect:"XPlat Code Coverage" --results-directory ./coverage || true
     
     - name: Test Report
@@ -49,12 +50,12 @@ jobs:
     - name: Code Coverage Report
       uses: irongut/CodeCoverageSummary@v1.3.0
       with:
-        filename: '**/coverage/**/coverage.cobertura.xml'
+        filename: 'coverage/**/coverage.cobertura.xml'
         badge: true
         fail_below_min: true
         format: markdown
         hide_branch_rate: false
-        hide_complexity: true
+        hide_complexity: false
         indicators: true
         output: both
         thresholds: '20 80'
@@ -64,7 +65,7 @@ jobs:
       if: github.event_name == 'pull_request'
       with:
         recreate: true
-        path: '**/code-coverage-results.md'
+        path: 'code-coverage-results.md'
 
     - name: Depcheck Backend
       uses: dependency-check/Dependency-Check_Action@main
@@ -77,6 +78,7 @@ jobs:
         args: >
           --failOnCVSS 7
           --enableRetired
+
     - name: Upload Test results
       uses: actions/upload-artifact@master
       with:
@@ -93,6 +95,7 @@ jobs:
         out: 'reports-front'
         args: >
           --enableRetired
+
     - name: Upload Test results Frontend
       uses: actions/upload-artifact@master
       with:
