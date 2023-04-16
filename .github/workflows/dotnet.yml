@@ -63,7 +63,11 @@ jobs:
     #       name: Depcheck report
     #       path: ${{github.workspace}}/reports
     - name: Upload Test results
-      id: html_preview
-      uses: pavi2410/html-preview-action@v2
+      uses: ./html-reporter-github-pages@main
+      if: always()
+      id: depcheck-result
       with:
+        test_results: depcheck-result
+        gh_pages: gh-pages
+        results_history: results-history
         html_file: ${{github.workspace}}/reports/dependency-check-report.html
