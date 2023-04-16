@@ -45,6 +45,26 @@ jobs:
         path: '**/test-results.trx'
         reporter: dotnet-trx
         fail-on-error: true
+        
+    - name: Code Coverage Report
+      uses: irongut/CodeCoverageSummary@v1.3.0
+      with:
+        filename: coverage/**/coverage.cobertura.xml
+        badge: true
+        fail_below_min: true
+        format: markdown
+        hide_branch_rate: false
+        hide_complexity: true
+        indicators: true
+        output: both
+        thresholds: '60 80'
+
+    - name: Add Coverage PR Comment
+      uses: marocchino/sticky-pull-request-comment@v2
+      if: github.event_name == 'pull_request'
+      with:
+        recreate: true
+        path: code-coverage-results.md
 
     - name: Depcheck
       uses: dependency-check/Dependency-Check_Action@main
@@ -57,17 +77,8 @@ jobs:
         args: >
           --failOnCVSS 7
           --enableRetired
-    # - name: Upload Test results
-    #   uses: actions/upload-artifact@master
-    #   with:
-    #       name: Depcheck report
-    #       path: ${{github.workspace}}/reports
     - name: Upload Test results
-      uses: ./html-reporter-github-pages@main
-      if: always()
-      id: depcheck-result
+      uses: actions/upload-artifact@master
       with:
-        test_results: depcheck-result
-        gh_pages: gh-pages
-        results_history: results-history
-        html_file: ${{github.workspace}}/reports/dependency-check-report.html
+          name: Depcheck report
+          path: ${{github.workspace}}/reports
