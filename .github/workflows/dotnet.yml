@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    name: Build and Test
+    name: Build and Test and Check Dependencies
 
     env:
       SOLUTION: 'ArenaGestor.sln'
