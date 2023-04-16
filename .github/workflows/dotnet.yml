@@ -19,11 +19,11 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    permissions:
-      id-token: write
-      contents: write
-      checks: write
-      permissions: write-all
+    # permissions:
+    #   id-token: write
+    #   contents: write
+    #   checks: write
+    permissions: write-all
 
     steps:
     - uses: actions/checkout@v3
