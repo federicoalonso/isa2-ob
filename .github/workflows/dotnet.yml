@@ -5,9 +5,9 @@ name: .NET
 
 on:
   push:
-    branches: [ "feature/gitactions" ]
+    branches: [ "develop", "main" ]
   pull_request:
-    branches: [ "develop" ]
+    branches: [ "develop", "main" ]
 
 jobs:
   build:
@@ -15,24 +15,86 @@ jobs:
 
     env:
       SOLUTION: 'ArenaGestor.sln'
-      PATH: './codigo/ArenaGestor'
+      PATH_CODE: './codigo/ArenaGestor'
 
     runs-on: ubuntu-latest
 
-    # permissions:
-    #   id-token: write
-    #   contents: read
-    #   checks: write
+    permissions:
+      id-token: write
+      contents: read
+      checks: write
 
     steps:
     - uses: actions/checkout@v3
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 6.0.x
+        dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: dotnet restore $PATH/$SOLUTION
+      run: dotnet restore $PATH_CODE/$SOLUTION
     - name: Build
-      run: dotnet build --no-restore $PATH/$SOLUTION
+      run: dotnet build --no-restore $PATH_CODE/$SOLUTION
     - name: Test API
-      run: dotnet test --no-build --verbosity normal $PATH/$SOLUTION
+      run: dotnet test --no-build --verbosity normal $PATH_CODE/$SOLUTION --logger "trx;LogFileName=test-results.trx" --collect:"XPlat Code Coverage" --results-directory ./coverage || true
+    
+    - name: Test Report
+      uses: dorny/test-reporter@v1
+      if: always()
+      with:
+        name: DotNET Tests
+        path: '**/test-results.trx'
+        reporter: dotnet-trx
+        fail-on-error: true
+
+    - name: Code Coverage Report
+      uses: irongut/CodeCoverageSummary@v1.3.0
+      with:
+        filename: '**/coverage/**/coverage.cobertura.xml'
+        badge: true
+        fail_below_min: true
+        format: markdown
+        hide_branch_rate: false
+        hide_complexity: true
+        indicators: true
+        output: both
+        thresholds: '20 80'
+
+    - name: Add Coverage PR Comment
+      uses: marocchino/sticky-pull-request-comment@v2
+      if: github.event_name == 'pull_request'
+      with:
+        recreate: true
+        path: '**/code-coverage-results.md'
+
+    - name: Depcheck Backend
+      uses: dependency-check/Dependency-Check_Action@main
+      id: Depcheck-Backend
+      with:
+        project: 'ArenaGestor'
+        path: 'codigo/ArenaGestor/'
+        format: 'HTML'
+        out: 'reports'
+        args: >
+          --failOnCVSS 7
+          --enableRetired
+    - name: Upload Test results
+      uses: actions/upload-artifact@master
+      with:
+          name: Depcheck report
+          path: ${{github.workspace}}/reports
+
+    - name: Depcheck Frontend
+      uses: dependency-check/Dependency-Check_Action@main
+      id: Depcheck-Frontend
+      with:
+        project: 'ArenaGestor-Front'
+        path: 'codigo/ArenaGestorFront/'
+        format: 'HTML'
+        out: 'reports-front'
+        args: >
+          --enableRetired
+    - name: Upload Test results Frontend
+      uses: actions/upload-artifact@master
+      with:
+          name: Depcheck report frontend
+          path: ${{github.workspace}}/reports-front
