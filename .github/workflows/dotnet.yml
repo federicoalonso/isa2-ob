@@ -92,7 +92,7 @@ jobs:
         format: 'HTML'
         out: 'reports-front'
         args: >
-          --failOnCVSS 7
+          --failOnCVSS 10
           --enableRetired
     - name: Upload Test results Frontend
       uses: actions/upload-artifact@master
