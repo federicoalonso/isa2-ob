@@ -70,6 +70,11 @@ namespace ArenaGestor.DataAccess.Managements
             {
                 protagonist.ConcertId = concert.ConcertId;
                 context.Entry<ConcertProtagonist>(protagonist).State = EntityState.Deleted;
+                if (protagonist.Protagonist != null)
+                {
+                    context.Entry<MusicalProtagonist>(protagonist.Protagonist).State = EntityState.Unchanged;
+                }
+                context.Attach<ConcertProtagonist>(protagonist);
             }
             if (concert != null && concert.Location != null && concert.Location.Country != null)
             {
@@ -77,6 +82,7 @@ namespace ArenaGestor.DataAccess.Managements
             }
 
             concerts.Update(concert);
+            context.SaveChanges();
         }
 
         public void DeleteConcert(Concert concert)
