@@ -35,7 +35,7 @@ jobs:
     - name: Build
       run: dotnet build --no-restore $PATH_CODE/$SOLUTION
     - name: Test API
-      run: dotnet test --no-build --verbosity normal $PATH_CODE/$SOLUTION --logger "trx;LogFileName=test-results.trx" || true
+      run: dotnet test --no-build --verbosity normal $PATH_CODE/$SOLUTION --logger "trx;LogFileName=test-results.trx" --collect:"XPlat Code Coverage" --results-directory ./coverage || true
     
     - name: Test Report
       uses: dorny/test-reporter@v1
