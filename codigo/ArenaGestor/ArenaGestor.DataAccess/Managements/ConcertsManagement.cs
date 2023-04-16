@@ -49,6 +49,22 @@ namespace ArenaGestor.DataAccess.Managements
                                                     x.Date <= dateRange.EndDate).AsNoTracking();
         }
 
+        public void InsertConcertFromImport(Concert concert)
+        {
+            concert.ConcertId = 0;
+            foreach (ConcertProtagonist protagonist in concert.Protagonists)
+            {
+                protagonist.ConcertId = 0;
+                if (protagonist.Protagonist != null)
+                {
+                    context.Entry<MusicalProtagonist>(protagonist.Protagonist).State = EntityState.Unchanged;
+                }
+            }
+            concert.Location.Country = null;
+            concert.Location = null;
+            concerts.Add(concert);
+        }
+
         public void InsertConcert(Concert concert)
         {
             concert.ConcertId = 0;
@@ -60,7 +76,6 @@ namespace ArenaGestor.DataAccess.Managements
                     context.Entry<MusicalProtagonist>(protagonist.Protagonist).State = EntityState.Unchanged;
                 }
             }
-
             concerts.Add(concert);
         }
 

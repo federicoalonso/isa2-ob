@@ -1,6 +1,7 @@
 ﻿using ArenaGestor.Business;
 using ArenaGestor.Business.Helpers;
 using ArenaGestor.BusinessInterface;
+using ArenaGestor.DataAccessInterface;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace ArenaGestor.BusinessFactory

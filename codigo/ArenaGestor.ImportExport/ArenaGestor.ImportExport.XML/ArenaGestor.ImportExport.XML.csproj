@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <Reference Include="ArenaGestor.Extensions">
-      <HintPath>C:\Users\frose\Desktop\Obligatorio Diseño\repo\codigo\ArenaGestor\ArenaGestor.Extensions\bin\Debug\net5.0\ArenaGestor.Extensions.dll</HintPath>
+      <HintPath>C:\Users\ESTEFANIA\Desktop\OBLIGATORIOISA2\isa2-ob\codigo\ArenaGestor\ArenaGestor.Extensions\bin\Debug\net5.0\ArenaGestor.Extensions.dll</HintPath>
     </Reference>
   </ItemGroup>
 

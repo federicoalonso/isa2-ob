@@ -6,11 +6,12 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="11.0.1" />
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ArenaGestor.APIContracts\ArenaGestor.APIContracts.csproj" />
     <ProjectReference Include="..\ArenaGestor.BusinessHelpers\ArenaGestor.BusinessHelpers.csproj" />
     <ProjectReference Include="..\ArenaGestor.BusinessInterface\ArenaGestor.BusinessInterface.csproj" />
     <ProjectReference Include="..\ArenaGestor.DataAccessInterface\ArenaGestor.DataAccessInterface.csproj" />
