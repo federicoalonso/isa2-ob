@@ -5,7 +5,7 @@ name: .NET
 
 on:
   push:
-    branches: [ "feature/gitactions" ]
+    branches: [ "develop" ]
   pull_request:
     branches: [ "develop" ]
 
