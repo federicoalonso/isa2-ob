@@ -125,7 +125,6 @@ namespace ArenaGestor.BusinessTest
             InitializeMapper();
             service = new ImportExportService(concertsService, reflection, mapper, locationManagement);
         }
-
         private void InitializeMapper()
         {
             var config = new MapperConfiguration(cfg =>
