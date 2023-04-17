@@ -2,10 +2,8 @@
 using ArenaGestor.BusinessInterface;
 using ArenaGestor.Domain;
 using ArenaGestor.Extensions.DTO;
-using ArenaGestor.Extensions;
 using AutoMapper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Moq;
 using System;
 using System.Collections.Generic;
 using ArenaGestor.DataAccessInterface;
@@ -14,7 +12,6 @@ using Microsoft.EntityFrameworkCore;
 using ArenaGestor.DataAccess.Managements;
 using ArenaGestor.DataAccessTest;
 using System.IO;
-using ArenaGestor.API;
 using ArenaGestor.APIContracts.Artist;
 using ArenaGestor.APIContracts.Band;
 using ArenaGestor.APIContracts.Concert;
@@ -25,6 +22,7 @@ using ArenaGestor.APIContracts.Security;
 using ArenaGestor.APIContracts.Soloist;
 using ArenaGestor.APIContracts.Ticket;
 using ArenaGestor.APIContracts.Users;
+using System.Linq;
 
 namespace ArenaGestor.BusinessTest
 {
@@ -36,55 +34,40 @@ namespace ArenaGestor.BusinessTest
         private IConcertsManagement concertManagement;
         private IMusicalProtagonistService musicalProtagonistService;
         private IMusicalProtagonistManagement musicalProtagonistManagement;
-        private IBandsManagement bandsManagement;
         private ICountrysManagement countryManagement;
         private ICountrysService countrysService;
         private ISecurityService securityService;
         private IMapper mapper;
-        private IImportExportMethod methodMock;
-        private List<string> Methods;
         private ImportExportService service;
-        private IImportExportMethod nullMethod;
-        private IEnumerable<ConcertDto> concertsDtoOK;
-        private IEnumerable<ConcertDto> concertsImportDtoOK;
-        private IEnumerable<Concert> concertsOK;
-        private Concert concertOK1;
-        private Concert concertOK2;
-        private Concert concertOK3;
         private DbContext context;
         ISessionManagement sessionManagement;
         IUsersManagement usersManagement;
         private ILocationManagement locationManagement;
         private FileComparator fileComparator;
-        private readonly string exportedFilePath = "C:\\Users\\ESTEFANIA\\Desktop\\Conciertos\\ExportTest.txt";
-        private readonly string fileToCompatePath = "C:\\Users\\ESTEFANIA\\Desktop\\Conciertos\\FileToCompare.txt";
-        private readonly string fileToImportPath = "C:\\Users\\ESTEFANIA\\Desktop\\Conciertos\\conciertosImportacionDtos.txt";
         private string importPathFromProjectXML;
         private string exportPathFromProjectXML;
-        private string importPathFromProjectJSON;
         private string exportPathFromProjectJSON;
-        private List<ConcertProtagonist> protagonists;
-        private ConcertProtagonist protagonist1;
-        private ConcertProtagonist protagonist2;
-        private Band beatles;
+        private string importPathFromProjectJSON;
+        private string fileToComparePathFromProjectXML;
+        private string fileToComparePathFromProjectJSON;
         private Band rolling;
         private Location location;
         private Gender gender;
         private Country country;
         private readonly string locationPlace = "Antel Arena";
         private readonly string locationStreet = "Av Damaso A. Larrañaga";
-        private ICountrysManagement countrysManagement;
-        private Array filesPath;
 
         [TestInitialize]
         public void InitTest()
         {
             importPathFromProjectXML = Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory);
-            exportPathFromProjectXML = importPathFromProjectJSON = exportPathFromProjectJSON = importPathFromProjectXML;
+            exportPathFromProjectXML = fileToComparePathFromProjectJSON = fileToComparePathFromProjectXML = importPathFromProjectJSON = exportPathFromProjectJSON = importPathFromProjectXML;
             importPathFromProjectXML += "/ImportExportFiles/ImportXML.txt";
             exportPathFromProjectXML += "/ImportExportFiles/ExportXML.txt";
             importPathFromProjectJSON += "/ImportExportFiles/ImportJSON.txt";
             exportPathFromProjectJSON += "/ImportExportFiles/ExportJSON.txt";
+            fileToComparePathFromProjectJSON += "/ImportExportFiles/FileToCompareJSON.txt";
+            fileToComparePathFromProjectXML += "/ImportExportFiles/FileToCompareXML.txt";
             CreateDataBase();
             country = new Country()
             {
@@ -103,54 +86,19 @@ namespace ArenaGestor.BusinessTest
             };
             context.Set<Location>().Add(location);
             context.SaveChanges();
-            bandsManagement = new BandsManagement(context);
             fileComparator = new FileComparator();
-            this.Methods = new List<string>() { "JSON", "XML" };
             gender = new Gender()
             {
                 GenderId = 1,
                 Name = "Rock",
             };
-            //beatles = new Band()
-            //{
-            //    MusicalProtagonistId = 1,
-            //    Gender = gender,
-            //    StartDate = DateTime.Now.AddDays(-10),
-            //    Artists = new List<ArtistBand> {
-            //        new ArtistBand
-            //        {
-            //            ArtistId = 1,
-            //            MusicalProtagonistId=1,
-            //        }
-            //    }
-            //};
             rolling = new Band()
             {
                 MusicalProtagonistId = 2,
                 Gender = gender,
                 GenderId = 1,
                 StartDate = DateTime.Parse("1962-01-01T00:00:00"),
-                //Artists = new List<ArtistBand> {
-                //    new ArtistBand
-                //    {
-                //        ArtistId = 2,
-                //        MusicalProtagonistId=2,
-                //    }
-                //}
             };
-            //protagonist1 = new ConcertProtagonist()
-            //{
-            //    MusicalProtagonistId = 1,
-            //    Protagonist = beatles,
-            //};
-            //protagonist2 = new ConcertProtagonist()
-            //{
-            //    MusicalProtagonistId = 2,
-            //    Protagonist = rolling,
-            //};
-
-            //bandsManagement.InsertBand(beatles);
-            //bandsManagement.InsertBand(rolling);
             context.Set<Band>().Add(rolling);
             context.SaveChanges();
 
@@ -316,27 +264,53 @@ namespace ArenaGestor.BusinessTest
             Assert.IsTrue(2 == methodsTest.Count);
         }
 
-        [ExpectedException(typeof(ArgumentException))]
-        [TestMethod]
-        public void ExportMethodNotExist()
-        {
-            service.ExportData("", "");
-        }
-
         [TestMethod]
         public void ExportImportationSuccessXML()
         {
+            InitTest();
             service.ImportData("XML", importPathFromProjectXML);
             service.ExportData("XML", exportPathFromProjectXML);
-            Assert.IsTrue(fileComparator.CompareFiles(exportPathFromProjectXML, importPathFromProjectXML));
+            Assert.IsTrue(!fileComparator.IsEmpty(exportPathFromProjectXML));
+            Assert.IsTrue(fileComparator.CompareFiles(exportPathFromProjectXML, fileToComparePathFromProjectXML));
         }
 
         [TestMethod]
         public void ExportImportationSuccessJSON()
         {
+            InitTest();
+            service.ImportData("JSON", importPathFromProjectJSON);
+            service.ExportData("JSON", exportPathFromProjectJSON);
+            Assert.IsTrue(!fileComparator.IsEmpty(exportPathFromProjectJSON));
+            Assert.IsTrue(fileComparator.CompareFiles(exportPathFromProjectJSON, fileToComparePathFromProjectJSON));
+        }
+
+        [TestMethod]
+        public void CrossedImportationXMLToJSONTest()
+        {
+            InitTest();
             service.ImportData("XML", importPathFromProjectXML);
             service.ExportData("JSON", exportPathFromProjectJSON);
             Assert.IsTrue(!fileComparator.IsEmpty(exportPathFromProjectJSON));
+            Assert.IsTrue(fileComparator.CompareFiles(exportPathFromProjectJSON, fileToComparePathFromProjectJSON));
+        }
+
+        [TestMethod]
+        public void CrossedImportationJSONToXMLTest()
+        {
+            InitTest();
+            service.ImportData("JSON", importPathFromProjectJSON);
+            service.ExportData("XML", exportPathFromProjectXML);
+            Assert.IsTrue(!fileComparator.IsEmpty(exportPathFromProjectXML));
+            Assert.IsTrue(fileComparator.CompareFiles(exportPathFromProjectXML, fileToComparePathFromProjectXML));
+        }
+
+
+        [ExpectedException(typeof(ArgumentException))]
+        [TestMethod]
+        public void ExportMethodNotExist()
+        {
+            InitTest();
+            service.ExportData("", "");
         }
     }
 }

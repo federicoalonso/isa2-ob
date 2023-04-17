@@ -7,10 +7,27 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ImportExportFiles\ExportJSON.txt" />
+    <None Remove="ImportExportFiles\ExportXML.txt" />
+    <None Remove="ImportExportFiles\FileToCompareJSON.txt" />
+    <None Remove="ImportExportFiles\FileToCompareXML.txt" />
+    <None Remove="ImportExportFiles\ImportJSON.txt" />
     <None Remove="ImportExportFiles\ImportXML.txt" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="ImportExportFiles\ExportJSON.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImportExportFiles\ExportXML.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImportExportFiles\FileToCompareJSON.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImportExportFiles\ImportJSON.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="ImportExportFiles\ImportXML.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -31,6 +48,12 @@
     <ProjectReference Include="..\..\ArenaGestor.Domain\ArenaGestor.Domain.csproj" />
     <ProjectReference Include="..\..\ArenaGestor.DataAccessInterface\ArenaGestor.DataAccessInterface.csproj" />
     <ProjectReference Include="..\ArenaGestor.DataAccessTest\ArenaGestor.DataAccessTest.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ImportExportFiles\FileToCompareXML.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>

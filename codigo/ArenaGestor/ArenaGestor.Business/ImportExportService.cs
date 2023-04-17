@@ -5,10 +5,8 @@ using ArenaGestor.Extensions;
 using AutoMapper;
 using System;
 using System.Collections.Generic;
-using ArenaGestor.APIContracts.Concert;
-using Microsoft.AspNetCore.Authorization;
 using ArenaGestor.DataAccessInterface;
-using System.Runtime.CompilerServices;
+
 
 namespace ArenaGestor.Business
 {

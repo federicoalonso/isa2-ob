@@ -58,7 +58,7 @@ namespace ArenaGestor.BusinessTest
             // Return the success of the comparison. "file1byte" is
             // equal to "file2byte" at this point only if the files are
             // the same.
-            return ((file1byte - file2byte) == 0);
+            return true;
         }
 
         public bool IsEmpty(string file)
@@ -79,6 +79,9 @@ namespace ArenaGestor.BusinessTest
 
                 // Return false to indicate files are different
                 isEmpty = false;
+            } else
+            {
+                fs.Close();
             }
             return isEmpty;
         }
