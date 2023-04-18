@@ -211,6 +211,37 @@ namespace ArenaGestor.DataAccessTest
         }
 
         [TestMethod]
+        public void UpdateConcertKeepProtagonistsTest()
+        {
+            concertOK.Date = DateTime.Today;
+            management.UpdateConcert(concertOK);
+            management.Save();
+            List<ConcertProtagonist> oldProtagonists = new List<ConcertProtagonist>() {
+                    new ConcertProtagonist()
+                    {
+                        Protagonist = new Band()
+                        {
+                            MusicalProtagonistId = 1,
+                            Name = "The Rolling Stones",
+                            StartDate = DateTime.Now,
+                            Gender = new Gender()
+                            {
+                                GenderId = 1,
+                                Name = "Rock"
+                            },
+                            Artists = new List<ArtistBand>()
+                        }
+                    } };
+            List<ConcertProtagonist> newProtagonists = management.GetConcerts().Where(g => g.ConcertId == concertOK.ConcertId).First().Protagonists;
+            Assert.AreEqual(oldProtagonists.Count, newProtagonists.Count);
+            foreach (ConcertProtagonist protagonist in oldProtagonists)
+            {
+                Assert.IsTrue(newProtagonists.Any(p=>p.Protagonist.MusicalProtagonistId == protagonist.Protagonist.MusicalProtagonistId));
+            }
+
+        }
+
+        [TestMethod]
         public void DeleteTest()
         {
             management.DeleteConcert(concertOK);

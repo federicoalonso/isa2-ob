@@ -9,6 +9,7 @@ namespace ArenaGestor.DataAccessInterface
         IEnumerable<Concert> GetConcerts(Func<Concert, bool> filter = null);
         IEnumerable<Concert> GetDateRangeConcertsByMusicalProtagonist(DateRange dateRange, int musicalProtagonistId);
         void InsertConcert(Concert concert);
+        void InsertConcertFromImport(Concert concert);
         Concert GetConcertById(int concertId);
         void DeleteConcert(Concert concert);
         void UpdateConcert(Concert concert);

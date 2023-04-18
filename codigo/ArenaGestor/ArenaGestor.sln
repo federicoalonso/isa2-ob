@@ -22,8 +22,14 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArenaGestor.APITest", "Test\ArenaGestor.APITest\ArenaGestor.APITest.csproj", "{A3A12002-C936-401A-A239-CFC045DE2B72}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArenaGestor.BusinessTest", "Test\ArenaGestor.BusinessTest\ArenaGestor.BusinessTest.csproj", "{B7B86F7A-B5CC-4EEC-9271-20CAA6F200B3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{17917460-4040-4AEB-9E27-EDF9D483C065} = {17917460-4040-4AEB-9E27-EDF9D483C065}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArenaGestor.DataAccessTest", "Test\ArenaGestor.DataAccessTest\ArenaGestor.DataAccessTest.csproj", "{8F39BAC0-EE53-4A7A-99DA-AFF0AB6634A2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{108B3A39-8B77-4D6D-89E2-728EDD561707} = {108B3A39-8B77-4D6D-89E2-728EDD561707}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArenaGestor.DataAccessFactory", "ArenaGestor.DataAccessFactory\ArenaGestor.DataAccessFactory.csproj", "{4E8E3053-91B3-4095-81BB-48696181C0AA}"
 EndProject

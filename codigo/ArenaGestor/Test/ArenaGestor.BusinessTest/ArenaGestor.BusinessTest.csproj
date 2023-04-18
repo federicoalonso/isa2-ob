@@ -7,6 +7,33 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ImportExportFiles\ExportJSON.txt" />
+    <None Remove="ImportExportFiles\ExportXML.txt" />
+    <None Remove="ImportExportFiles\FileToCompareJSON.txt" />
+    <None Remove="ImportExportFiles\FileToCompareXML.txt" />
+    <None Remove="ImportExportFiles\ImportJSON.txt" />
+    <None Remove="ImportExportFiles\ImportXML.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ImportExportFiles\ExportJSON.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImportExportFiles\ExportXML.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImportExportFiles\FileToCompareJSON.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImportExportFiles\ImportJSON.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImportExportFiles\ImportXML.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
     <PackageReference Include="Moq" Version="4.17.2" />
     <PackageReference Include="MSTest.TestAdapter" Version="2.2.7" />
@@ -15,9 +42,33 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\ArenaGestor.API\ArenaGestor.API.csproj" />
     <ProjectReference Include="..\..\ArenaGestor.Business\ArenaGestor.Business.csproj" />
+    <ProjectReference Include="..\..\ArenaGestor.DataAccess\ArenaGestor.DataAccess.csproj" />
     <ProjectReference Include="..\..\ArenaGestor.Domain\ArenaGestor.Domain.csproj" />
     <ProjectReference Include="..\..\ArenaGestor.DataAccessInterface\ArenaGestor.DataAccessInterface.csproj" />
+    <ProjectReference Include="..\ArenaGestor.DataAccessTest\ArenaGestor.DataAccessTest.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ImportExportFiles\FileToCompareXML.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

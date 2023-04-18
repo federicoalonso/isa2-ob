@@ -92,7 +92,6 @@ namespace ArenaGestor.Business.Helpers
                 .SetBasePath(directory)
                 .AddJsonFile("appsettings.json")
                 .Build();
-
             return configuration.GetSection("AppSettings").GetSection("ExtensionsFolder").Value;
         }
     }
