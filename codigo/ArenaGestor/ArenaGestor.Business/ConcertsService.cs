@@ -212,5 +212,33 @@ namespace ArenaGestor.Business
             }
         }
 
+        public Concert InsertConcertFromImport(Concert concert)
+        {
+            ValidConcert(concert);
+            concertManagement.InsertConcertFromImport(concert);
+            concertManagement.Save();
+            return concert;
+        }
+
+        public ConcertsInsertResult InsertConcertsFromImport(List<Concert> concerts)
+        {
+            ConcertsInsertResult result = new ConcertsInsertResult();
+            int ConcertNumber = 1;
+            foreach (var concert in concerts)
+            {
+                try
+                {
+                    InsertConcertFromImport(concert);
+                    result.InsertedRecords++;
+                }
+                catch (Exception ex)
+                {
+                    result.NotInsertedRecords++;
+                    result.Messages.Add($"The concert number {ConcertNumber} have the following error: " + ex.Message);
+                }
+                ConcertNumber++;
+            }
+            return result;
+        }
     }
 }
