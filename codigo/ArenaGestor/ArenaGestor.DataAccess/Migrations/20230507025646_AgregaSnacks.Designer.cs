@@ -4,14 +4,16 @@ using ArenaGestor.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ArenaGestor.DataAccess.Migrations
 {
     [DbContext(typeof(ArenaGestorContext))]
-    partial class ArenaGestorContextModelSnapshot : ModelSnapshot
+    [Migration("20230507025646_AgregaSnacks")]
+    partial class AgregaSnacks
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -325,32 +327,6 @@ namespace ArenaGestor.DataAccess.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Session");
-                });
-
-            modelBuilder.Entity("ArenaGestor.Domain.Snack", b =>
-                {
-                    b.Property<int>("SnackId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<double>("Price")
-                        .HasColumnType("float");
-
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int");
-
-                    b.HasKey("SnackId");
-
-                    b.HasIndex("SnackId")
-                        .IsUnique();
-
-                    b.ToTable("Snack");
                 });
 
             modelBuilder.Entity("ArenaGestor.Domain.Ticket", b =>
