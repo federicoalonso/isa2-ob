@@ -1,7 +1,5 @@
 ﻿using System.Net;
 using ArenaGestor.APIContracts.Snack;
-using ArenaGestor.Domain;
-using Microsoft.AspNetCore.Http;
 
 namespace SpecFlowArenaGestor.StepDefinitions
 {
@@ -12,8 +10,6 @@ namespace SpecFlowArenaGestor.StepDefinitions
         private readonly SnackDto snackDto = new SnackDto();
         private readonly Assistant assistant = new Assistant();
         private string role;
-
-        //private string token;
 
         public AddSnackStepsDefinition(ScenarioContext context)
         {
@@ -39,12 +35,6 @@ namespace SpecFlowArenaGestor.StepDefinitions
             snackDto.Price = price;
         }
 
-        //[Given(@"el id ""(.*)""")]
-        //public void GivenTheID(int id)
-        //{
-        //    snackDto.SnackId = id;
-        //}
-
         [Given(@"la cantidad ""(.*)""")]
         public void GivenTheQuantity(int quantity)
         {
@@ -55,14 +45,7 @@ namespace SpecFlowArenaGestor.StepDefinitions
         public async Task WhenIPostThisRequestToTheOperation(string operation)
         {
             HttpResponseMessage response = await assistant.SendRequest(operation, snackDto, role, "Post");
-            //try
-            //{
             context.Set(response.StatusCode, "ResponseStatusCode");
-            //}
-            //finally
-            //{
-            //    // move along, move along
-            //}
         }        
 
         [Then(@"Veo el mensaje con el codigo ""(.*)""")]

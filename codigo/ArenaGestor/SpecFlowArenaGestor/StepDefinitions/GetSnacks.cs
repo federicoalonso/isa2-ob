@@ -13,8 +13,6 @@ namespace SpecFlowArenaGestor.StepDefinitions
         private readonly Assistant assistant = new Assistant();
         private string role;
 
-        //private string token;
-
         public GetSnacksStepsDefinition(ScenarioContext context)
         {
             this.context = context;
@@ -32,14 +30,7 @@ namespace SpecFlowArenaGestor.StepDefinitions
         {
             snacksDto.Add(snackDto);
             HttpResponseMessage response = await assistant.SendRequest(operation, snackDto, role, "Get").ConfigureAwait(false);
-            //try
-            //{
             context.Set(response.StatusCode, "ResponseStatusCode");
-            //}
-            //finally
-            //{
-            //    // move along, move along
-            //}
         }
 
         [When(@"solicito el ""(.*)"" de id ""(.*)""")]
@@ -47,14 +38,7 @@ namespace SpecFlowArenaGestor.StepDefinitions
         {
             snacksDto.Add(snackDto);
             HttpResponseMessage response = await assistant.SendRequest($"{operation}/{id}", snackDto, role, "Get").ConfigureAwait(false);
-            //try
-            //{
             context.Set(response.StatusCode, "ResponseStatusCode");
-            //}
-            //finally
-            //{
-            //    // move along, move along
-            //}
         }
 
         [Then(@"veo el mensaje de la obtencion con el codigo ""(.*)""")]

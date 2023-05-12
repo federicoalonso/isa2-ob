@@ -20,4 +20,9 @@
     <Folder Include="Support\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ArenaGestor.APIContracts\ArenaGestor.APIContracts.csproj" />
+    <ProjectReference Include="..\ArenaGestor.API\ArenaGestor.API.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -13,7 +13,6 @@ namespace SpecFlowArenaGestor.StepDefinitions
         private readonly Assistant assistant = new Assistant();
         private string role;
 
-        //private string token;
 
         public BuySnackStepsDefinition(ScenarioContext context)
         {
@@ -68,14 +67,7 @@ namespace SpecFlowArenaGestor.StepDefinitions
         {
             snacksDto.Add(snackDto);
             HttpResponseMessage response = await assistant.SendRequest($"{operation}/cart", snacksDto, role, "Put").ConfigureAwait(false);
-            //try
-            //{
             context.Set(response.StatusCode, "ResponseStatusCode");
-            //}
-            //finally
-            //{
-            //    // move along, move along
-            //}
         }
 
         [When(@"solicito la compra de varios ""(.*)""")]
@@ -84,14 +76,7 @@ namespace SpecFlowArenaGestor.StepDefinitions
             snacksDto.Add(snackDto);
             snacksDto.Add(snackDto2);
             HttpResponseMessage response = await assistant.SendRequest($"{operation}/cart", snacksDto, role, "Put").ConfigureAwait(false);
-            //try
-            //{
             context.Set(response.StatusCode, "ResponseStatusCode");
-            //}
-            //finally
-            //{
-            //    // move along, move along
-            //}
         }
 
         [Then(@"verifico el mensaje con el codigo ""(.*)""")]

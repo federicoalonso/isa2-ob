@@ -32,7 +32,6 @@ namespace ArenaGestor.API.Controllers
         {
             try
             {
-
                 var snack = mapper.Map<Snack>(snackDto);
                 Snack updatedSnack = snackService.InsertSnack(snack);
                 var resultDto = mapper.Map<SnackDto>(updatedSnack);
@@ -48,6 +47,37 @@ namespace ArenaGestor.API.Controllers
             }
         }
 
+        [AuthorizationFilter(RoleCode.Administrador, RoleCode.Espectador, RoleCode.Vendedor)]
+        [HttpPut("cart")]
+        public IActionResult PutSnackBuy([FromBody] List<SnackDto> snacksDto)
+        {
+            try
+            {
+                var token = this.HttpContext.Request.Headers["token"];
+                var snacks = new List<Snack>();
+                foreach (SnackDto snackDto in snacksDto)
+                {
+                    var snack = mapper.Map<Snack>(snackDto);
+                    snacks.Add(snack);
+                }
+                List<Snack> boughtSnacks = snackService.BuySnack(token, snacks);
+                if (boughtSnacks == null || boughtSnacks.Count == 0)
+                {
+                    return BadRequest("No es posible procesar su pedido");
+                }else
+                {
+                    return Ok(snacksDto);
+                }
+            }
+            catch (NullReferenceException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (ArgumentException ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
 
         [AuthorizationFilter(RoleCode.Administrador)]
         [HttpPut()]
@@ -60,6 +90,46 @@ namespace ArenaGestor.API.Controllers
                 return Ok(resultDto);
             }
             catch (NullReferenceException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (ArgumentException ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+
+        [AuthorizationFilter(RoleCode.Administrador, RoleCode.Espectador, RoleCode.Vendedor)]
+        [HttpGet()]
+        public IActionResult GetSnacks()
+        {
+            try
+            {
+                var token = this.HttpContext.Request.Headers["token"];
+                var snacks = snackService.GetSnacks(token);
+                var resultDto = mapper.Map<IEnumerable<SnackDto>>(snacks);
+                return Ok(resultDto);
+            }
+            catch(NullReferenceException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (ArgumentException ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+
+        [AuthorizationFilter(RoleCode.Administrador, RoleCode.Espectador, RoleCode.Vendedor)]
+        [HttpGet("{snackId}")]
+        public IActionResult GetSnackById([FromRoute] int snackId)
+        {
+            try
+            {
+                var snack = snackService.GetSnackById(snackId);
+                var resultDto = mapper.Map<SnackDto>(snack);
+                return Ok(resultDto);
+            } catch(NullReferenceException ex)
             {
                 return NotFound(ex.Message);
             }
@@ -86,21 +156,6 @@ namespace ArenaGestor.API.Controllers
             {
                 return NotFound(ex.Message);
             }
-        }
-
-        public IActionResult PutSnackBuy(List<SnackDto> snackDto)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IActionResult GetSnacks()
-        {
-            throw new NotImplementedException();
-        }
-
-        public IActionResult GetSnackById(int snackId)
-        {
-            throw new NotImplementedException();
         }
     }
 }

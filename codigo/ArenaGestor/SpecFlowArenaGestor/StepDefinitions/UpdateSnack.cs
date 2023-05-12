@@ -12,8 +12,6 @@ namespace SpecFlowArenaGestor.StepDefinitions
     {
         private readonly ScenarioContext context;
         private readonly SnackDto snackDto = new SnackDto();
-        //private readonly List<SnackDto> snacksDto = new List<SnackDto>();
-        //private int snackIdToDelete;
         private readonly Assistant assistant = new Assistant();
         private string role;
 

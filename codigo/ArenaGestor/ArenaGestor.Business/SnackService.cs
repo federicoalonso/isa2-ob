@@ -11,7 +11,6 @@ namespace ArenaGestor.Business
 {
     public class SnackService : ISnackService
     {
-
         private ISnackManagement snackManagement;
         private ISecurityService securityService;
 
@@ -21,6 +20,77 @@ namespace ArenaGestor.Business
             this.securityService = securityService;
         }
 
+        public List<Snack> BuySnack(string token, List<Snack> snacks)
+        {
+            if (snacks == null)
+            {
+                throw new ArgumentException("Datos inválidos en la compra.");
+            }
+            if(snacks.Count == 0)
+            {
+                throw new ArgumentException("Seleccione snacks para comprar.");
+            }
+            foreach(Snack snack in snacks)
+            {
+                snack.ValidSnack();
+            }
+            var user = securityService.GetUserOfToken(token);
+            if (user == null)
+            {
+                throw new NullReferenceException("El usuario no está logueado.");
+            }
+            List<Snack> snacksUpdate = new List<Snack>();
+            try
+            {
+                foreach(Snack snack in snacks)
+                {
+                    var snackToUpdate = snackManagement.GetSnackById(snack.SnackId);
+                    if (snackToUpdate == null)
+                    {
+                        throw new NullReferenceException("SnackId no existe en el sistema");
+                    }
+                    if (snackToUpdate.Quantity < snack.Quantity)
+                    {
+                        throw new NullReferenceException("La cantidad de snacks solicitada supera el stock disponible");
+                    }
+                    snackToUpdate.Quantity -= snack.Quantity;
+                    snacksUpdate.Add(snackToUpdate);
+                }
+            } catch (Exception e)
+            {
+                
+                if (e.Message.Equals("La cantidad de snacks solicitada supera el stock disponible"))
+                {
+                    throw new NullReferenceException("La cantidad de snacks solicitada supera el stock disponible");
+                }
+                else
+                {
+                    throw new NullReferenceException("El snack no existe.");                
+                }
+
+            }
+            if (snacksUpdate.Count == 0)
+            {
+                throw new NullReferenceException("Error al acceder al producto seleccionado, intente nuevamente.");
+            }
+            foreach (Snack snackUpdate in snacksUpdate)
+            {
+                snackManagement.UpdateSnack(snackUpdate);
+
+            }
+            snackManagement.Save();
+            return snacksUpdate;
+        }
+
+        public IEnumerable<Snack> GetSnacks(string token)
+        {
+            var user = securityService.GetUserOfToken(token);
+            if (user == null)
+            {
+                throw new NullReferenceException("El usuario no está logueado");
+            }
+            return snackManagement.GetSnacks();
+        }
 
         public Snack InsertSnack(Snack snack)
         {
@@ -58,19 +128,15 @@ namespace ArenaGestor.Business
             snackManagement.Save();
         }
 
-        public List<Snack> BuySnack(string token, List<Snack> snacks)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<Snack> GetSnacks(string token)
-        {
-            throw new NotImplementedException();
-        }
-
         public Snack GetSnackById(int snackId)
         {
-            throw new NotImplementedException();
+            CommonValidations.ValidId(snackId);
+            Snack snack = snackManagement.GetSnackById(snackId);
+            if (snack == null)
+            {
+                throw new NullReferenceException("El snack no existe");
+            }
+            return snack;
         }
     }
 }

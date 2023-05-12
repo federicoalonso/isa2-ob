@@ -13,8 +13,6 @@ namespace SpecFlowArenaGestor.StepDefinitions
 
         private readonly ScenarioContext context;
         private readonly SnackDto snackDto = new SnackDto();
-        //private readonly List<SnackDto> snacksDto = new List<SnackDto>();
-        //private int snackIdToDelete;
         private readonly Assistant assistant = new Assistant();
         private string role;
 
@@ -23,14 +21,6 @@ namespace SpecFlowArenaGestor.StepDefinitions
             this.context = context;
             role = "";
         }
-
-        //[Given(@"existe un snack con los valores ""(.*)"" de precio ""(.*)"" y cantidad ""(.*)""")]
-        //public void GivenTheDescription(string description, float price, int quantity)
-        //{
-        //    snackDto.Name = description;
-        //    snackDto.Quantity = quantity;
-        //    snackDto.Price = price;
-        //}
 
         [Given(@"un usuario con rol ""(.*)""")]
         public void GivenTheRole(string role)
@@ -69,7 +59,5 @@ namespace SpecFlowArenaGestor.StepDefinitions
             HttpResponseMessage responseDelete = await assistant.SendRequest($"{operation}/{idUnknown}", null, role, "Delete");
             context.Set(responseDelete.StatusCode, "ResponseStatusCode");
         }
-
-
     }
 }
