@@ -6,7 +6,7 @@ export class ConcertResultConcertDto {
     tourName: String = "";
     date: Date = new Date();
     ticketCount: Number = 0;
-    price: Number = 0;
+    price: number = 0;
     protagonists: Array<ConcertGetMusicalProtagonistDto> = new Array();
     location: ConcertResultLocationDto = new ConcertResultLocationDto();
 }
