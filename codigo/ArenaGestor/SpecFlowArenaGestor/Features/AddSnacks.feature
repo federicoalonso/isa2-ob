@@ -45,15 +45,6 @@ Scenario: Alta de snack incorrecto, usuario sin credenciales habilitadas Vendedo
 	When solicito el alta del "Snacks" generado con esos valores
 	Then Veo el mensaje con el codigo "403" o el error "500"
 
-#Scenario: Alta de snack incorrecto, valor de snackid especificado en alta
-#	Given un "Administrador" logueado en el sistema
-#	And el nombre "Producto con id especificada"
-#	And el id "25"
-#	And el precio "50" 
-#	And la cantidad "200"
-#	When solicito el alta del "Snacks" generado con esos valores
-#	Then Veo el mensaje con el codigo "500"
-
 Scenario: Alta de snack incorrecto, precio negativo
 	Given un "Administrador" logueado en el sistema
 	And el nombre "Ticholos"
