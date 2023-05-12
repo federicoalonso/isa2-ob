@@ -50,6 +50,9 @@ import { ProtagonistBandsComponent } from './routes/protagonist/protagonist.band
 import { ProtagonistSoloistsComponent } from './routes/protagonist/protagonist.soloists.component';
 import { ProtagonistBandComponent } from './routes/protagonist/protagonist.band.component';
 import { ProtagonistSoloistComponent } from './routes/protagonist/protagonist.soloist.component';
+import { SnacksComponent } from './routes/snacks/snacks.component';
+import { SnackInsertComponent } from './routes/snacks/snack-insert.component';
+import { SnackUpdateComponent } from './routes/snacks/snack-update.component';
 
 @NgModule({
   declarations: [
@@ -89,7 +92,10 @@ import { ProtagonistSoloistComponent } from './routes/protagonist/protagonist.so
     ProtagonistBandsComponent,
     ProtagonistSoloistsComponent,
     ProtagonistBandComponent,
-    ProtagonistSoloistComponent
+    ProtagonistSoloistComponent,
+    SnacksComponent,
+    SnackInsertComponent,
+    SnackUpdateComponent
   ],
   imports: [
     CommonModule,
