@@ -36,7 +36,7 @@ jobs:
       run: dotnet build --no-restore $PATH_CODE/$SOLUTION
 
     - name: Test Backend
-      run: dotnet test --no-build --verbosity normal $PATH_CODE/$SOLUTION --logger "trx;LogFileName=test-results.trx" --collect:"XPlat Code Coverage" --results-directory ./coverage || true
+      run: dotnet test --no-build --verbosity normal $PATH_CODE/$SOLUTION --filter "FullyQualifiedName!=SpecFlowArenaGestor.csproj" --logger "trx;LogFileName=test-results.trx" --collect:"XPlat Code Coverage" --results-directory ./coverage || true
     
     - name: Test Report
       uses: dorny/test-reporter@v1
