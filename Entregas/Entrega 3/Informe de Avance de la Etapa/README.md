@@ -64,4 +64,4 @@ Como conclusión tenemos que venimos aprendiendo este proceso de trabajo, de a p
 
 Se adjunta el enlace al video de la retrospectiva.
 
-[Video Retrospectiva](https://fi365-my.sharepoint.com/:v:/g/personal/ha196991_fi365_ort_edu_uy/EXNY9LePlf9AnyMdysy51DsBQOI89dQNQ8OihJPgriI9iQ?email=DS223427%40fi365.ort.edu.uy)
+![Video Retrospectiva](https://fi365-my.sharepoint.com/:v:/g/personal/ha196991_fi365_ort_edu_uy/EXNY9LePlf9AnyMdysy51DsBQOI89dQNQ8OihJPgriI9iQ?email=DS223427%40fi365.ort.edu.uy)
