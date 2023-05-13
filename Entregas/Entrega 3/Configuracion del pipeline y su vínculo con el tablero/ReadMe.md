@@ -131,7 +131,7 @@ Lo que realiza específicamente en los pasos es:
 ![pipeline 1 ](../assets/pipeline1pruebas.png)
 
 * Luego, en caso de ser un pull request, nos mostrará la cobertura de código de las pruebas por línea (Line Rate), por caminos que puede tomar la ejecución (Branch Rate) y la complejidad del paquete (Relación entre la cantidad de líneas y caminos que puede tomar el código).
-![pipeline 2 ](../assets/pipeline1cobertura.png)
+![pipeline 2 ](../assets/pipeline2cobertura.png)
 
 * Posteriormente realiza un análisis de dependencias, tanto de backend como de frontend. Luego del análisis queda un artefacto por cada uno de los escaneos, el de backend no presenta mayores problemas, sólo una vulnerabilidad no crítica:
 ![pipeline 3 ](../assets/pipeline3dependencias.png)
