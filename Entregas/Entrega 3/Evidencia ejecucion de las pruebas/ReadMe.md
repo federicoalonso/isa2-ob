@@ -22,12 +22,12 @@ Nueve pruebas ejecutadas exitosamente:
 
 ## Compra de Snacks
 
-Dieciseis pruebas ejecutadas exitosamente:
+Dieciséis pruebas ejecutadas exitosamente:
 
 ![Ejecución exitosa de los casos de prueba de Compra de Snacks](https://github.com/federicoalonso/isa2-ob/blob/develop/Entregas/Entrega%203/Evidencia%20ejecucion%20de%20las%20pruebas/Compra%20de%20snacks%20ejecuci%C3%B3n%20exitosa.png)
 
 ## Obtener Snacks
 
-Dieciseis pruebas ejecutadas exitosamente:
+Trece pruebas ejecutadas exitosamente:
 
 ![Ejecución exitosa de los casos de prueba de Obtener Snacks](https://github.com/federicoalonso/isa2-ob/blob/develop/Entregas/Entrega%203/Evidencia%20ejecucion%20de%20las%20pruebas/Obtener%20snacks%20ejecuci%C3%B3n%20exitosa.png)
