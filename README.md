@@ -1,6 +1,6 @@
 # isa2-ob 
 
-## Estrutura do projeto
+## Estrutura ddel proyecto
 
 Se presentará la documentación en formato Markdown, partiendo desde aquí hacia cada una de las carpetas del proyecto.
 
@@ -19,4 +19,4 @@ En cada directorio se encontrará un nuevo archivo README.md que permitirá nave
 
 ## Última entrega
 
-La última entrega se encuentra en la carpeta ![Entrega3](Entregas/Entrega 3/README.md)
+La última entrega se encuentra en la carpeta ![Entrega3](./Entregas/Entrega%203/README.md)
