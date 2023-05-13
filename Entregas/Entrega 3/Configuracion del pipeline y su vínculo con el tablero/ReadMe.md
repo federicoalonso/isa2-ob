@@ -128,12 +128,15 @@ Lo que realiza específicamente en los pasos es:
 * Setea .NET 5, realiza un restore para instalar las dependencias y luego realiza un build.
 * Se efectúan los tests del backend, aquí se corren los tests unitarios y se emplean configuraciones adicionales para poder generar reportes de ejecución de pruebas y análisis de cobertura.
 * Uno de los resultados es la vista de ejecución de las pruebas, aquí nos queda en el apartado de la izquierda el análisis de todas las pruebas y su resultado.
+
 ![pipeline 1 ](../assets/pipeline1pruebas.png)
 
 * Luego, en caso de ser un pull request, nos mostrará la cobertura de código de las pruebas por línea (Line Rate), por caminos que puede tomar la ejecución (Branch Rate) y la complejidad del paquete (Relación entre la cantidad de líneas y caminos que puede tomar el código).
+
 ![pipeline 2 ](../assets/pipeline2cobertura.png)
 
 * Posteriormente realiza un análisis de dependencias, tanto de backend como de frontend. Luego del análisis queda un artefacto por cada uno de los escaneos, el de backend no presenta mayores problemas, sólo una vulnerabilidad no crítica:
+
 ![pipeline 3 ](../assets/pipeline3dependencias.png)
 
 
@@ -141,6 +144,7 @@ Lo que realiza específicamente en los pasos es:
 
 
 * El escaneo de dependencias del Frontend sí presenta múltiples vulnerabilidades críticas, por lo que tuvimos que quitarle las restricciones para que pueda pasar el pipeline.
+
 ![pipeline 5 ](../assets/pipeline5dependencias.png)
 
 
