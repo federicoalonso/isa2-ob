@@ -19,7 +19,6 @@ Nuestro pipeline lo tenemos configurado para que corra en el paso Testing Automa
 La configuración del mismo se basa en un archivo YAML que representa el flujo de trabajo, el mismo contiene lo siguiente:
 
 
-## .NET
 
 ```yaml
 name: .NET
@@ -122,7 +121,7 @@ jobs:
       with:
           name: Depcheck report frontend
           path: ${{github.workspace}}/reports-front
-
+```
 
 Lo que realiza específicamente en los pasos es:
 * Corre el pipeline cuando se realiza un push o un pull request en las ramas main y develop.
@@ -136,6 +135,7 @@ Lo que realiza específicamente en los pasos es:
 
 * Posteriormente realiza un análisis de dependencias, tanto de backend como de frontend. Luego del análisis queda un artefacto por cada uno de los escaneos, el de backend no presenta mayores problemas, sólo una vulnerabilidad no crítica:
 ![pipeline 3 ](../assets/pipeline3dependencias.png)
+
 
 ![pipeline 4 ](../assets/pipeline4dependencias.png)
 
