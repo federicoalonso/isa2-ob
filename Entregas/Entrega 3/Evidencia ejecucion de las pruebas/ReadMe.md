@@ -8,7 +8,7 @@ A continuación, se adjuntan capturas de pantalla de la ejecución exitosa de to
 
 Diez pruebas ejecutadas exitosamente:
 
-![Ejecución exitosa de los casos de prueba de Alta de Snacks](../assets/assets/AltaGreenStatus.png)
+![Ejecución exitosa de los casos de prueba de Alta de Snacks](../assets/AltaGreenStatus.png)
 
 ### Baja de Snacks
 
@@ -36,7 +36,7 @@ Trece pruebas ejecutadas exitosamente:
 
 ### Living Documentation
 
-Se adjunta la documentación viva generada por la herramienta _SpecFlow_
+Se adjunta la [documentación viva generada por la herramienta _SpecFlow_](../assets/LivingDoc.html)
 
 ## _Front End_
 
