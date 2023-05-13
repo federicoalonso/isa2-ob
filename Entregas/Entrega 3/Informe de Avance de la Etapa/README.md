@@ -33,29 +33,29 @@ A continuación se adjunta una imágen de extraídas del tablero de Metro Retro 
 
 **Antes:**
 
-![Tablero antes de la review](../assets/retro1.png)
+![Tablero antes de la review](../assets/retro1.PNG)
 
 **Posterior:**
 
-![Tablero después de la review](../assets/retro2.png)
+![Tablero después de la review](../assets/retro2.PNG)
 
 ## Análisis de la retrospectiva
 
 En la sección Drop vimos que debemos solicitar asistencia al grupo docente al momento de estancarnos por desconocimiento de las tecnologías, esto derivó en una mejora, que establece que si nos estancamos más de una hora en la realización de una tarea por desconocimiento de una tecnología, debemos solicitar asistencia a los profesores (postit que colocamos en Improve).
 
-![Tablero Drop](../assets/drop.png)
+![Tablero Drop](../assets/drop.PNG)
 
 En Add establecimos que para la próxima entrega vamos a establecer una issue para analizar diferentes herramientas para realizar las retrospectivas, de esta forma saldremos de nuestra zona de confort y podremos aprender diferentes técnicas. Además detectamos que no recibimos la devolución de los profesores a tiempo, por lo que no estábamos preparados al momento de la clase para consultar dudas al respecto, por lo que debemos verificar con más atención los medios de comunicación. Luego Verificamos que debemos intentar identificar los posibles cuellos de botella al principio de la entrega, dándonos tiempo para poder reaccionar con tiempo a lo solicitado. Finalmente tenemos una tarjeta de análisis de métricas, que no la continuamos desarrollando porque viene de la mano de mejorar el manejo del tablero que hablamos en otro cuadrante.
 
-![Tablero Add](../assets/add.png)
+![Tablero Add](../assets/add.PNG)
 
 En Keep, se presentaron varias notas que reflejan nuestro buen funcionamiento como equipo, manteniéndonos comunicados de forma fluida. También establecimos que una buena práctica a mantener es no esperar a último momento para realizar las tareas, lo que nos permitió llegar a tiempo con el trabajo. De la mano de lo analizado en la instancia anterior, usamos el método de solicitud de asistencia al momento de bloqueo, lo cual fue esencial y vamos a mantenerlo para el resto del obligatorio. Finalmente vimos que establecer un DoD al principio (lo cual nos ayudó BDD), fue muy práctico para la posterior review con el PO, verificando de forma correcta todo el comportamiento que debía tener el código.
 
-![Tablero Keep](../assets/keep.png)
+![Tablero Keep](../assets/keep.PNG)
 
 En la sección Improve establecimos que debemos mejorar la forma de documentar la retrospectiva, a efecto de que no sea necesario ver el video para poder entenderla. Mejorar el mantenimiento del tablero e ir registrando todo con la herramienta toggle, para obligarnos a mantener el tablero actualizado. De aquí derivó también que debemos mantener un WIP más reducido, para poder además registrar mejor los tiempos de las tareas.
 
-![Tablero Improve](../assets/improve.png)
+![Tablero Improve](../assets/improve.PNG)
 
 ## Conclusiones
 
