@@ -32,18 +32,18 @@ En la siguiente tabla podemos ver el detalle del resumen de cada proceso:
 
 A continuación se muestra el detalle de como fueron moviendose las issue durante el desarrollo de la entrega. 
 
-![Etapa 1 Todo](../assets/todo.png)
+![Etapa 1 Todo](../assets/todo.PNG)
 
-![Etapa 2 ReqDef](../assets/ReqDef.png)
+![Etapa 2 ReqDef](../assets/ReqDef.PNG)
 
-![Etapa 3 ReqDef](../assets/ReqDef.png)
+![Etapa 3 ReqDef](../assets/ReqDef.PNG)
 
 ![Etapa 4 TestImpl](../assets/testImpl.png)
 
-![Etapa 5 AppImpl](../assets/appImpl.png)
+![Etapa 5 AppImpl](../assets/appImpl.PNG)
 
-![Etapa 6 Testing](../assets/testing.png)
+![Etapa 6 Testing](../assets/testing.PNG)
 
-![Etapa 7 Refactor](../assets/refactor.png)
+![Etapa 7 Refactor](../assets/refactor.PNG)
 
-![Etapa 7 Review](../assets/review.png)
+![Etapa 7 Review](../assets/review.PNG)
