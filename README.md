@@ -1,6 +1,6 @@
 # isa2-ob 
 
-## Estrutura ddel proyecto
+## Estructura del proyecto
 
 Se presentará la documentación en formato Markdown, partiendo desde aquí hacia cada una de las carpetas del proyecto.
 
