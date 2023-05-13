@@ -2,6 +2,8 @@
 
 ## Lecciones aprendidas
 
+Dejamos el acceso a un histórico de las lecciones aprendidas durante el proyecto, el mismo se encuentra en el siguiente [enlace](./HistoricoLeccionesAprendidas/README.md).
+
 En el transcurso de la etapa detectamos lecciones que aprendimos y queremos destacar en esta sección:
 
 **Documentar correctamente los informes y amoldar la estructura del repositorio para que sea más accesible:**
