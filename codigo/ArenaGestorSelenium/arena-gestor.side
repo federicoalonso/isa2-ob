@@ -674,14 +674,419 @@
       "targets": [],
       "value": "El nombre del snack es un campo requerido"
     }]
+  }, {
+    "id": "d55edd57-a99d-42e7-96fc-260b64414523",
+    "name": "CompraSnackSinCantidad",
+    "commands": [{
+      "id": "098d47f1-42a4-4b56-9371-af66feeca530",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8ed5ad11-427b-499f-abfa-2e44c42dc173",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "36460ffe-af43-4091-9eb1-2c4000a7b140",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//a[contains(text(),'Francisco Rosello')]",
+      "targets": [],
+      "value": "logueado"
+    }, {
+      "id": "11d7dd3a-27ad-4bbc-813a-380f12ed28a7",
+      "comment": "",
+      "command": "if",
+      "target": "${logueado}<1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "04fe058a-8181-4a25-856c-a13241e276e9",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'Ingresar')]",
+      "targets": [
+        ["css=.btn-outline-primary", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ingresar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "05a551b0-b5e4-431d-b26c-c4635d170e25",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mb-3:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "99839567-3273-437b-89bb-3ddec91fcca4",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.ng-dirty:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "francisco.rosello.fran@gmail.com"
+    }, {
+      "id": "09d1600a-41f9-4b43-8536-622c304826cf",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.ng-untouched", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "25e880fb-9bdc-48d8-ac38-cfcbfd12694d",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.ng-untouched", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "fran"
+    }, {
+      "id": "5aac970e-1872-4328-921d-c3a948037085",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'Login')]",
+      "targets": [
+        ["css=.w-100", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3cd0d4e0-1adf-4198-b544-514c5eb1a2ee",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "67396615-be1c-418d-8453-094df5759350",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Comprar tickets",
+      "targets": [
+        ["linkText=Comprar tickets", "linkText"],
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//a[contains(text(),'Comprar tickets')]", "xpath:link"],
+        ["xpath=(//a[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/tickets/comprar/4')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Comprar tickets')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee5ddfb3-96ce-45b9-8858-96c2b062875a",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "xpath=//input[@name='ammount']",
+      "targets": [],
+      "value": "Keys.CONTROL + \"a\",1"
+    }, {
+      "id": "e3a27ddf-e01d-4ca9-a53a-9b9898d09e28",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'Agregar snack')]",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Agregar snack')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "977149f2-fe4a-4ab1-9790-ab32f57b4d76",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//select[@name='name']",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.form-select", "css:finder"],
+        ["xpath=//select[@name='name']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f3f47ef-c542-4dd8-a268-1e802e181519",
+      "comment": "",
+      "command": "select",
+      "target": "name=name",
+      "targets": [],
+      "value": "label=Papas"
+    }, {
+      "id": "bc3b4450-c69e-4aea-bdc6-96a7aabaa290",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//input[@name='quantity']",
+      "targets": [
+        ["name=quantity", "name"],
+        ["css=.form-control:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='quantity']", "xpath:attributes"],
+        ["xpath=//td[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "223e00b6-022f-4070-8cde-216cac27cfb1",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "xpath=//td[3]/input",
+      "targets": [
+        ["name=quantity", "name"],
+        ["css=.form-control:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='quantity']", "xpath:attributes"],
+        ["xpath=//td[3]/input", "xpath:position"]
+      ],
+      "value": "Keys.CONTROL + \"a\",0"
+    }, {
+      "id": "7b43e2e3-ac80-4061-b65b-469aecc18188",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'Confirmar')]",
+      "targets": [
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirmar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "926ff289-aa62-4b74-ab88-30d7aad219e8",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//div[starts-with(.,' Ticket comprado con ')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4a81fa85-ea3c-4e4d-8734-c9b1c518fd35",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//div[contains(.,'Seleccione snacks para comprar')]",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "5ef84f08-3f97-4827-a189-b0d7e5f2bcb2",
+    "name": "CompraSnackSinSnackName",
+    "commands": [{
+      "id": "1142e66b-2b57-45af-8e52-df587dc3901a",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3f7c5ef0-2033-4ce2-be06-7201dd011c03",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "640da5a0-05dc-4edf-bcd1-2e0436e83766",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//a[contains(text(),'Francisco Rosello')]",
+      "targets": [],
+      "value": "logueado"
+    }, {
+      "id": "b86e75f0-75a8-4d13-97e5-9571c40b6d42",
+      "comment": "",
+      "command": "if",
+      "target": "${logueado}<1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "12ad8582-6738-4a7b-a4dc-e4d167af1cfe",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'Ingresar')]",
+      "targets": [
+        ["css=.btn-outline-primary", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ingresar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "736a2467-1e30-418e-88b3-c22a54895dfa",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mb-3:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6c9b2573-8090-4432-bf30-67814523de0f",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.ng-dirty:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "francisco.rosello.fran@gmail.com"
+    }, {
+      "id": "39cf01f5-7fd9-4496-81a9-d824c3e72b30",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.ng-untouched", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "772e1125-f694-4162-a310-2c8106f1af5b",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.ng-untouched", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "fran"
+    }, {
+      "id": "28acf1ff-8d64-4aa3-a231-4c566804f8fb",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'Login')]",
+      "targets": [
+        ["css=.w-100", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "96b1de7a-fde0-4468-96f9-8b9abfe3a18f",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0310b1a5-552c-44ab-810d-4bc72af434ca",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Comprar tickets",
+      "targets": [
+        ["linkText=Comprar tickets", "linkText"],
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//a[contains(text(),'Comprar tickets')]", "xpath:link"],
+        ["xpath=(//a[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/tickets/comprar/4')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Comprar tickets')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d6d26b1c-1c30-46f6-95b7-524b6c8ae6a3",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "xpath=//input[@name='ammount']",
+      "targets": [],
+      "value": "Keys.CONTROL + \"a\",1"
+    }, {
+      "id": "d2b792e8-8b35-4115-b1ba-117b310ab3f5",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'Agregar snack')]",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Agregar snack')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dad5a243-d206-4eec-af3a-875fa4e0a62e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//input[@name='quantity']",
+      "targets": [
+        ["name=quantity", "name"],
+        ["css=.form-control:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='quantity']", "xpath:attributes"],
+        ["xpath=//td[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7728f02a-6a00-446a-962c-f1eaf3f4be58",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "xpath=//td[3]/input",
+      "targets": [
+        ["name=quantity", "name"],
+        ["css=.form-control:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='quantity']", "xpath:attributes"],
+        ["xpath=//td[3]/input", "xpath:position"]
+      ],
+      "value": "Keys.CONTROL + \"a\",1"
+    }, {
+      "id": "91d08448-6648-400e-a0e0-161ee5899ede",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'Confirmar')]",
+      "targets": [
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirmar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e0dcad69-5e39-4395-9d81-ef79462a05f8",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//div[starts-with(.,' Ticket comprado con ')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5e190ac6-d7b2-40f9-9cc2-96104800d194",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//div[contains(.,'Seleccione snacks para comprar')]",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "00031ca8-b0d3-4606-a26a-f502a4bb3f9d",
-    "name": "Default Suite",
+    "name": "Compra de snacks",
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["0179b7b5-cca2-4e49-bb78-f67faaf42f29"]
+    "tests": ["0179b7b5-cca2-4e49-bb78-f67faaf42f29", "d55edd57-a99d-42e7-96fc-260b64414523", "5ef84f08-3f97-4827-a189-b0d7e5f2bcb2"]
   }],
   "urls": ["http://localhost:4200/"],
   "plugins": []
