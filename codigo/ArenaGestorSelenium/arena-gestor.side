@@ -1521,6 +1521,173 @@
       "targets": [],
       "value": "[object Object]"
     }]
+  }, {
+    "id": "9fb54844-fa4d-47c0-adf5-ff5a28d2eff3",
+    "name": "BajaSnack",
+    "commands": [{
+      "id": "48cbf039-f769-4e08-ac5e-b1a8b7d4832c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "72508012-798a-48cc-934d-d296527c76b0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c7f9af7f-a6f0-4959-be0f-58342bb342b6",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//a[contains(text(),'Francisco Rosello')]",
+      "targets": [],
+      "value": "logueado"
+    }, {
+      "id": "57da9de9-2f9e-41b9-a5c5-4c4591b1e674",
+      "comment": "",
+      "command": "if",
+      "target": "${logueado}<1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6f85e725-739e-4db9-8c5c-7070fc01a624",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'Ingresar')]",
+      "targets": [
+        ["css=.btn-outline-primary", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ingresar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f96d76c-8c19-4856-ba72-f95b590d8788",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mb-3:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c41859ce-a5bd-4c29-aa9d-c675a51e74c3",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.ng-dirty:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "francisco.rosello.fran@gmail.com"
+    }, {
+      "id": "2c645527-b112-48af-8acc-e3cd0a8311cf",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.ng-untouched", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "03361fb4-e6b8-42aa-a8fa-d9d0f008bf2b",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.ng-untouched", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "fran"
+    }, {
+      "id": "4480e278-360a-4977-889e-b8a771036717",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'Login')]",
+      "targets": [
+        ["css=.w-100", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e3fce71-beb2-4362-b4a4-901ae92192f4",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bc999ee6-b4c2-4439-90ea-ebd3b188d58f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Administracion",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "585c40cb-7d02-4e15-ad50-93bc2e45d8f7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Snacks",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ead24451-bcdd-4340-abe4-c15a4455e097",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(2) .btn-danger",
+      "targets": [
+        ["css=tr:nth-child(2) .btn-danger", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//tr[2]/td/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cdd3f1a2-cecc-4a75-b8e0-3cf07ad5bd9a",
+      "comment": "",
+      "command": "waitForText",
+      "target": "css=.modal-body",
+      "targets": [
+        ["css=.modal-body", "css:finder"],
+        ["xpath=//div[@id='deleteSnack']/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div/div/div[2]", "xpath:position"]
+      ],
+      "value": "Estas seguro que deseas borrar este snack?"
+    }, {
+      "id": "992b41c4-6515-4b07-a060-e95a719429aa",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='deleteSnack']/div/div/div[3]/button[2]",
+      "targets": [
+        ["css=.btn-danger:nth-child(2)", "css:finder"],
+        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
+        ["xpath=//div[@id='deleteSnack']/div/div/div[3]/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Eliminar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "015e99aa-50b0-4de1-9543-8fac2b579e5a",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.toast-message",
+      "targets": [],
+      "value": "Snack eliminado correctamente"
+    }]
   }],
   "suites": [{
     "id": "00031ca8-b0d3-4606-a26a-f502a4bb3f9d",
@@ -1536,6 +1703,13 @@
     "parallel": false,
     "timeout": 300,
     "tests": ["97f4ffb5-d8c9-4826-b89b-f620a3a2e45d", "b3bd6d89-53d2-4637-aa11-8a77481fa0d9", "d3356170-9fdf-4f05-8322-869c6e0edec2", "b134157a-6fac-4f8e-9799-1c53149ab1bd"]
+  }, {
+    "id": "64f85ae8-62b9-4e85-ac56-7b72e46e3602",
+    "name": "Baja snacks",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["9fb54844-fa4d-47c0-adf5-ff5a28d2eff3"]
   }],
   "urls": ["http://localhost:4200/"],
   "plugins": []
