@@ -31,7 +31,7 @@
       "id": "cd3f6bb7-826e-45c8-ac62-88a39dd4919e",
       "comment": "",
       "command": "if",
-      "target": "${logueado}=0",
+      "target": "${logueado}<1",
       "targets": [],
       "value": ""
     }, {
