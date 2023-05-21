@@ -1,0 +1,415 @@
+{
+  "id": "2c0aa07c-c7e9-47a1-9515-df20dc5f7ba3",
+  "version": "2.0",
+  "name": "Alta de Snack",
+  "url": "http://localhost:4200",
+  "tests": [{
+    "id": "54d46584-12a0-4144-bfbb-a766a43b6914",
+    "name": "1 Alta de snack correcto",
+    "commands": [{
+      "id": "b9002371-b2dc-49ba-862e-0fb41a3dcd0c",
+      "comment": "",
+      "command": "open",
+      "target": "/administracion/snacks",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8cc4d32c-2c9c-4987-99cb-e9801fa37b95",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1208x895",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "15bfd2d4-37ae-4302-9bdc-13359e444b32",
+      "comment": "",
+      "command": "click",
+      "target": "css=span",
+      "targets": [
+        ["css=span", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'Nuevo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4cb4023e-1efb-4ed7-a286-e13c81241949",
+      "comment": "",
+      "command": "click",
+      "target": "name=snackName",
+      "targets": [
+        ["name=snackName", "name"],
+        ["css=.mb-3:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='snackName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0981fe39-fca8-4782-abcd-fe0bfaa48a50",
+      "comment": "",
+      "command": "type",
+      "target": "name=snackName",
+      "targets": [
+        ["name=snackName", "name"],
+        ["css=.ng-dirty", "css:finder"],
+        ["xpath=//input[@name='snackName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Otro"
+    }, {
+      "id": "014d750e-34e0-4426-99e4-45f0bbc99b61",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=price",
+      "targets": [
+        ["name=price", "name"],
+        ["css=.mb-3:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='price']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Keys.CONTROL + \"a\",40"
+    }, {
+      "id": "2a47b26a-2c71-4aa3-9c1d-4440c3337bfb",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=quantity",
+      "targets": [
+        ["name=quantity", "name"],
+        ["css=.ng-untouched", "css:finder"],
+        ["xpath=//input[@name='quantity']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "Keys.CONTROL + \"a\",50"
+    }, {
+      "id": "01dde3c1-23a7-4394-90aa-f79509a06a93",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirmar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9525d7a1-bcff-41d7-8145-d2756e78cd0b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.toast-message",
+      "targets": [],
+      "value": "Snack agregado correctamente"
+    }]
+  }, {
+    "id": "9d8f680b-f0af-48fb-9041-e6ce14242e55",
+    "name": "2 Alta de snack incorrecto, precio negativo",
+    "commands": [{
+      "id": "f39638ae-286d-4e93-af6c-acad7c545b7d",
+      "comment": "",
+      "command": "open",
+      "target": "/administracion/snacks",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "690b8a7b-4beb-4f80-88b0-0f86081a9b2c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1208x895",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "acccc68f-65dc-4afc-bce9-364c16f63d30",
+      "comment": "",
+      "command": "click",
+      "target": "css=span",
+      "targets": [
+        ["css=span", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'Nuevo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "abb4f3eb-5856-4ee6-a293-a5247a15331a",
+      "comment": "",
+      "command": "click",
+      "target": "name=snackName",
+      "targets": [
+        ["name=snackName", "name"],
+        ["css=.mb-3:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='snackName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0adf2f0c-a345-48ed-ba3c-b69bd3031a64",
+      "comment": "",
+      "command": "type",
+      "target": "name=snackName",
+      "targets": [
+        ["name=snackName", "name"],
+        ["css=.ng-dirty", "css:finder"],
+        ["xpath=//input[@name='snackName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Ticholos"
+    }, {
+      "id": "9982758e-90c1-4bb5-b20d-8017383c5bfc",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=price",
+      "targets": [
+        ["name=price", "name"],
+        ["css=.mb-3:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='price']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Keys.CONTROL + \"a\", Keys.DELETE"
+    }, {
+      "id": "1bbe7012-2131-4425-8e14-cc2fbc3c9ee6",
+      "comment": "",
+      "command": "type",
+      "target": "name=price",
+      "targets": [],
+      "value": "-50"
+    }, {
+      "id": "758e0614-2410-4e4e-bba9-fa8a5d582508",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=quantity",
+      "targets": [
+        ["name=quantity", "name"],
+        ["css=.ng-untouched", "css:finder"],
+        ["xpath=//input[@name='quantity']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "Keys.CONTROL + \"a\",200"
+    }, {
+      "id": "5b056a0e-8493-432a-b6a8-f063f7e637b5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirmar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ce065ed2-8ec4-4f2b-bd53-4dc843af97de",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.toast-title",
+      "targets": [],
+      "value": "Error"
+    }]
+  }, {
+    "id": "6a722c41-6e21-4914-81c1-b3b878166096",
+    "name": "3 Alta de snack incorrecto, cantidad negativa",
+    "commands": [{
+      "id": "f5f2d2b3-3b24-4c9c-971a-8fa3e43cb8c9",
+      "comment": "",
+      "command": "open",
+      "target": "/administracion/snacks",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a6122a17-8ff5-4528-a477-92bfffdfc44d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1208x895",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "22d6837c-f11b-489e-a1ca-4170613c5a98",
+      "comment": "",
+      "command": "click",
+      "target": "css=span",
+      "targets": [
+        ["css=span", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'Nuevo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1a46cdc-2de5-4b6b-8bc4-f2619e4f2465",
+      "comment": "",
+      "command": "click",
+      "target": "name=snackName",
+      "targets": [
+        ["name=snackName", "name"],
+        ["css=.mb-3:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='snackName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c53d47f-6e5e-45ae-8f14-6fdae8579c30",
+      "comment": "",
+      "command": "type",
+      "target": "name=snackName",
+      "targets": [
+        ["name=snackName", "name"],
+        ["css=.ng-dirty", "css:finder"],
+        ["xpath=//input[@name='snackName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Ticholos"
+    }, {
+      "id": "517b9bf6-6abc-4956-933d-b04a32a77269",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=price",
+      "targets": [
+        ["name=price", "name"],
+        ["css=.mb-3:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='price']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Keys.CONTROL + \"a\", Keys.DELETE"
+    }, {
+      "id": "3c6c09c5-7c25-40ec-91e6-4950f46c4f3f",
+      "comment": "",
+      "command": "type",
+      "target": "name=price",
+      "targets": [],
+      "value": "100"
+    }, {
+      "id": "b4307324-21b3-4a71-ad6b-f0912ee1e37a",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=quantity",
+      "targets": [
+        ["name=quantity", "name"],
+        ["css=.ng-untouched", "css:finder"],
+        ["xpath=//input[@name='quantity']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "Keys.CONTROL + \"a\",Keys.DELETE"
+    }, {
+      "id": "adf58a4f-7c00-4ed2-aaa3-f8643de44a13",
+      "comment": "",
+      "command": "type",
+      "target": "name=quantity",
+      "targets": [],
+      "value": "-50"
+    }, {
+      "id": "b849bc6e-e380-4628-af27-6a123d5a9c84",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirmar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b025be71-e414-4d7b-bd1f-4fd0b221998c",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.toast-title",
+      "targets": [],
+      "value": "Error"
+    }]
+  }, {
+    "id": "2d13874c-5c5d-40a2-afd8-64cf4aef1648",
+    "name": "4 Alta de snack incorrecto, producto sin descripción ",
+    "commands": [{
+      "id": "47e262f1-7713-4ad7-9244-f19bc352c018",
+      "comment": "",
+      "command": "open",
+      "target": "/administracion/snacks",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a3baf582-1e05-47b7-a0e7-450edbc586d4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1208x895",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "077d045b-1398-49d4-9654-20ca2a36e89c",
+      "comment": "",
+      "command": "click",
+      "target": "css=span",
+      "targets": [
+        ["css=span", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'Nuevo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b8f96173-1193-4da6-ab2e-12d2bf66af12",
+      "comment": "",
+      "command": "type",
+      "target": "name=snackName",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c4ef3dab-b53d-44d0-90b5-632adb4f84c6",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=price",
+      "targets": [
+        ["name=price", "name"],
+        ["css=.mb-3:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='price']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Keys.CONTROL + \"a\", Keys.DELETE"
+    }, {
+      "id": "bdc3b4d1-6f65-41f2-8ee1-500fe2e85553",
+      "comment": "",
+      "command": "type",
+      "target": "name=price",
+      "targets": [],
+      "value": "100"
+    }, {
+      "id": "3244ca2e-a798-41f7-894c-f7106425394c",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=quantity",
+      "targets": [
+        ["name=quantity", "name"],
+        ["css=.ng-untouched", "css:finder"],
+        ["xpath=//input[@name='quantity']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "Keys.CONTROL + \"a\",Keys.DELETE"
+    }, {
+      "id": "5a4ce7fe-ffe8-41c8-af30-4fc3ce7e6b1c",
+      "comment": "",
+      "command": "type",
+      "target": "name=quantity",
+      "targets": [],
+      "value": "50"
+    }, {
+      "id": "88d00014-c350-4edb-9eb8-712f070c1b63",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirmar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0d1247ad-3c74-4b9c-acbb-712febe669b1",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.toast-title",
+      "targets": [],
+      "value": "Error"
+    }]
+  }],
+  "suites": [{
+    "id": "a150378c-97cd-4161-a369-54d7d9c9a420",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["54d46584-12a0-4144-bfbb-a766a43b6914"]
+  }],
+  "urls": ["http://localhost:4200/"],
+  "plugins": []
+}
