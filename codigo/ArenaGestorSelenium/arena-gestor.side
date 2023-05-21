@@ -108,24 +108,12 @@
       ],
       "value": ""
     }, {
-      "id": "186533d7-7ec7-437c-bd3c-0d65acf2ac81",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//input[@name='ammount']",
-      "targets": [
-        ["name=ammount", "name"],
-        ["css=.form-control", "css:finder"],
-        ["xpath=//input[@name='ammount']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
       "id": "35795cbb-df4e-4a6f-981c-536096058c7d",
       "comment": "",
-      "command": "type",
+      "command": "sendKeys",
       "target": "xpath=//input[@name='ammount']",
       "targets": [],
-      "value": "1"
+      "value": "Keys.CONTROL + \"a\",1"
     }, {
       "id": "1dbea311-9917-4ca1-8091-05b5becfb679",
       "comment": "",
@@ -179,19 +167,7 @@
         ["xpath=//input[@name='quantity']", "xpath:attributes"],
         ["xpath=//td[3]/input", "xpath:position"]
       ],
-      "value": "${KEY_UP}"
-    }, {
-      "id": "7379dae7-e843-4588-ae28-a58d489ce5a7",
-      "comment": "",
-      "command": "sendKeys",
-      "target": "name=quantity",
-      "targets": [
-        ["name=quantity", "name"],
-        ["css=.form-control:nth-child(1)", "css:finder"],
-        ["xpath=//input[@name='quantity']", "xpath:attributes"],
-        ["xpath=//td[3]/input", "xpath:position"]
-      ],
-      "value": "${KEY_UP}"
+      "value": "Keys.CONTROL + \"a\",1"
     }, {
       "id": "978f8ef3-b629-4772-84b2-94c3d6c40e4d",
       "comment": "",
@@ -204,15 +180,18 @@
       ],
       "value": ""
     }, {
-      "id": "c23284e9-70eb-4225-9293-9c22ba76f1c1",
+      "id": "47aebd43-9aa1-4c05-8773-ca4cce132421",
       "comment": "",
-      "command": "click",
-      "target": "css=.toast-message",
-      "targets": [
-        ["css=.toast-message", "css:finder"],
-        ["xpath=//div[@id='toast-container']/div/div", "xpath:idRelative"],
-        ["xpath=//body/div/div/div/div", "xpath:position"]
-      ],
+      "command": "verifyElementPresent",
+      "target": "//div[starts-with(.,' Ticket comprado con ')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dd681512-5572-4715-8a75-465aa12002b2",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//div[contains(.,'y los snacks comprados con éxito')]",
+      "targets": [],
       "value": ""
     }]
   }, {
