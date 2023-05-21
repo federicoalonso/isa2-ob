@@ -72,7 +72,7 @@ public class SuiteTests : IDisposable {
     driver.FindElement(By.LinkText("Conciertos")).Click();
     driver.FindElement(By.Name("filterEndDate")).Click();
     driver.FindElement(By.XPath("//span[contains(.,\'2023\')]")).Click();
-    driver.FindElement(By.XPath("//span[contains(.,\'2026\')]")).Click();
+    driver.FindElement(By.XPath("//span[contains(.,\'2027\')]")).Click();
     driver.FindElement(By.XPath("//span[contains(.,\'December\')]")).Click();
     driver.FindElement(By.XPath("//span[contains(.,\'31\')]")).Click();
     driver.FindElement(By.Name("filterTourName")).Click();
@@ -92,7 +92,7 @@ public class SuiteTests : IDisposable {
     driver.FindElement(By.LinkText("Conciertos")).Click();
     driver.FindElement(By.Name("filterEndDate")).Click();
     driver.FindElement(By.XPath("//span[contains(.,\'2023\')]")).Click();
-    driver.FindElement(By.XPath("//span[contains(.,\'2026\')]")).Click();
+    driver.FindElement(By.XPath("//span[contains(.,\'2027\')]")).Click();
     driver.FindElement(By.XPath("//span[contains(.,\'December\')]")).Click();
     driver.FindElement(By.XPath("//span[contains(.,\'31\')]")).Click();
     driver.FindElement(By.Name("filterTourName")).Click();
@@ -106,7 +106,7 @@ public class SuiteTests : IDisposable {
     driver.FindElement(By.LinkText("Volver")).Click();
     driver.FindElement(By.Name("filterEndDate")).Click();
     driver.FindElement(By.XPath("//span[contains(.,\'2023\')]")).Click();
-    driver.FindElement(By.XPath("//span[contains(.,\'2026\')]")).Click();
+    driver.FindElement(By.XPath("//span[contains(.,\'2027\')]")).Click();
     driver.FindElement(By.XPath("//span[contains(.,\'December\')]")).Click();
     driver.FindElement(By.XPath("//span[contains(.,\'31\')]")).Click();
     driver.FindElement(By.Name("filterTourName")).Click();
@@ -162,7 +162,7 @@ public class SuiteTests : IDisposable {
     driver.FindElement(By.LinkText("Conciertos")).Click();
     driver.FindElement(By.Name("filterEndDate")).Click();
     driver.FindElement(By.XPath("//span[contains(.,\'2023\')]")).Click();
-    driver.FindElement(By.XPath("//span[contains(.,\'2026\')]")).Click();
+    driver.FindElement(By.XPath("//span[contains(.,\'2027\')]")).Click();
     driver.FindElement(By.XPath("//span[contains(.,\'December\')]")).Click();
     driver.FindElement(By.XPath("//span[contains(.,\'31\')]")).Click();
     driver.FindElement(By.Name("filterTourName")).Click();
@@ -182,7 +182,7 @@ public class SuiteTests : IDisposable {
     driver.FindElement(By.LinkText("Conciertos")).Click();
     driver.FindElement(By.Name("filterEndDate")).Click();
     driver.FindElement(By.XPath("//span[contains(.,\'2023\')]")).Click();
-    driver.FindElement(By.XPath("//span[contains(.,\'2026\')]")).Click();
+    driver.FindElement(By.XPath("//span[contains(.,\'2027\')]")).Click();
     driver.FindElement(By.XPath("//span[contains(.,\'December\')]")).Click();
     driver.FindElement(By.XPath("//span[contains(.,\'31\')]")).Click();
     driver.FindElement(By.Name("filterTourName")).Click();
@@ -196,7 +196,7 @@ public class SuiteTests : IDisposable {
     driver.FindElement(By.LinkText("Volver")).Click();
     driver.FindElement(By.Name("filterEndDate")).Click();
     driver.FindElement(By.XPath("//span[contains(.,\'2023\')]")).Click();
-    driver.FindElement(By.XPath("//span[contains(.,\'2026\')]")).Click();
+    driver.FindElement(By.XPath("//span[contains(.,\'2027\')]")).Click();
     driver.FindElement(By.XPath("//span[contains(.,\'December\')]")).Click();
     driver.FindElement(By.XPath("//span[contains(.,\'31\')]")).Click();
     driver.FindElement(By.Name("filterTourName")).Click();
@@ -254,7 +254,7 @@ public class SuiteTests : IDisposable {
     driver.FindElement(By.LinkText("Conciertos")).Click();
     driver.FindElement(By.Name("filterEndDate")).Click();
     driver.FindElement(By.XPath("//span[contains(.,\'2023\')]")).Click();
-    driver.FindElement(By.XPath("//span[contains(.,\'2026\')]")).Click();
+    driver.FindElement(By.XPath("//span[contains(.,\'2027\')]")).Click();
     driver.FindElement(By.XPath("//span[contains(.,\'December\')]")).Click();
     driver.FindElement(By.XPath("//span[contains(.,\'31\')]")).Click();
     driver.FindElement(By.Name("filterTourName")).Click();
@@ -274,7 +274,7 @@ public class SuiteTests : IDisposable {
     driver.FindElement(By.LinkText("Conciertos")).Click();
     driver.FindElement(By.Name("filterEndDate")).Click();
     driver.FindElement(By.XPath("//span[contains(.,\'2023\')]")).Click();
-    driver.FindElement(By.XPath("//span[contains(.,\'2026\')]")).Click();
+    driver.FindElement(By.XPath("//span[contains(.,\'2027\')]")).Click();
     driver.FindElement(By.XPath("//span[contains(.,\'December\')]")).Click();
     driver.FindElement(By.XPath("//span[contains(.,\'31\')]")).Click();
     driver.FindElement(By.Name("filterTourName")).Click();
@@ -292,7 +292,7 @@ public class SuiteTests : IDisposable {
     driver.FindElement(By.LinkText("Volver")).Click();
     driver.FindElement(By.Name("filterEndDate")).Click();
     driver.FindElement(By.XPath("//span[contains(.,\'2023\')]")).Click();
-    driver.FindElement(By.XPath("//span[contains(.,\'2026\')]")).Click();
+    driver.FindElement(By.XPath("//span[contains(.,\'2027\')]")).Click();
     driver.FindElement(By.XPath("//span[contains(.,\'December\')]")).Click();
     driver.FindElement(By.XPath("//span[contains(.,\'31\')]")).Click();
     driver.FindElement(By.Name("filterTourName")).Click();
