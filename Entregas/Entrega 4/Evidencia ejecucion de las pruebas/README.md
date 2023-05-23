@@ -47,8 +47,8 @@ Las pruebas no fueron automatizadas en el pipeline de github por dificultades qu
 
 Las pruebas de selenium se encuentran en un archivo de tipo .side la carpeta [codigo/ArenaGestorSelenium](../../../codigo/ArenaGestorSelenium/)
 
-Para que las pruebas funcionen correctamente debemos tener cargado el archivo .bak que tenemos en la carpeta [DB .bak](../DB%20.bak) y además debemos configurar también el correspondiente connection string en el archivo appsettings de nuestro proyecto API.
+Para que las pruebas funcionen correctamente debemos tener cargado el archivo .bak que tenemos en la carpeta [DB .bak](./DB%20.bak) y además debemos configurar también el correspondiente connection string en el archivo appsettings de nuestro proyecto API.
 
-También debemos tener el contenido de la carpeta [ArenaGestorExtensions](../ArenaGestorExtensions) en la ruta C:\ArenaGestorExtensions\ de nuestra máquina.
+También debemos tener el contenido de la carpeta [ArenaGestorExtensions](./ArenaGestorExtensions) en la ruta C:\ArenaGestorExtensions\ de nuestra máquina.
 
 ---
