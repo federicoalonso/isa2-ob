@@ -7,7 +7,8 @@ A continuación, se adjuntan capturas de pantalla de la ejecución exitosa de to
 La ejecución de las pruebas también se puede ver en el [Video de demostración al PO](https://fi365-my.sharepoint.com/:v:/g/personal/ha196991_fi365_ort_edu_uy/EQ6cg1oJ9ZNAk_tiBLbFzNkBc_wufT0Ex-IOVVUGKnIAiQ?email=DS223427%40fi365.ort.edu.uy)
 
 Organizamos la separación de los tests en 7 suites distintas:
-*Funcionalidad de Alta, Baja y Modificación de Snacks:
+![Distintas tests suites](../assets/testsSuites.png)
+**Funcionalidad de Alta, Baja y Modificación de Snacks:**
 
 └─Alta snacks
 
@@ -15,21 +16,21 @@ Organizamos la separación de los tests en 7 suites distintas:
 
 └─Modificar snacks
 
-*Funcionalidad de Compra Snacks:
+**Funcionalidad de Compra Snacks:**
 
 └─Compra de snacks
 
 └─Ver snacks
 
-*Bug Importación-Exportación:
+**Bug Importación-Exportación:**
 
 └─Importar-Exportar
 
-*Bug Modificación de concierto:
+**Bug Modificación de concierto:**
 
 └─Modificar concierto
 
-![Distintas tests suites](../assets/testsSuites.png)
+
 
 Las pruebas implementadas y ejecutadas en cada una corresponden a los distintos escenarios de las tarjetas escritas en formato BDD realizadas para la tercer entrega, kas que pueden encontrarse siguiendo los siguientes enlaces:
 
@@ -44,6 +45,6 @@ Las pruebas implementadas y ejecutadas en cada una corresponden a los distintos 
   Las pruebas no fueron automatizadas en el pipeline de github por dificultades que se nos presentan al tener que hacer un restore de la base de datos de prueba cada vez que se realiza la ejecución de ellas. Sumado a la dificultad para levantar el backend y luego indicar al frontend el puerto autogenerado correspondiente a la API.
 
   ## Configuración a tener en cuenta
-  Para que las pruebas funcionen correctamente debemos tener cargado el archivo .bak que tenemos en la carpeta [DB .bak](/DB%20.bak) y además debemos configur también el correspondiente connection string en el archivo appsettings de nuestro proyecto API.
+  Para que las pruebas funcionen correctamente debemos tener cargado el archivo .bak que tenemos en la carpeta [DB .bak](../DB%20.bak) y además debemos configurar también el correspondiente connection string en el archivo appsettings de nuestro proyecto API.
 
-  También debemos tener el contendio de la carpeta [ImportExportFiles](/ImportExportFiles) en la ruta C:\ArenaGestorExtensions\ de nuestra máquina.
+  También debemos tener el contenido de la carpeta [ImportExportFiles](../ImportExportFiles) en la ruta C:\ArenaGestorExtensions\ de nuestra máquina.
