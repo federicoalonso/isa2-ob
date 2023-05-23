@@ -15,7 +15,7 @@ Al aplicarse una gestión del proyecto utilizando kanban, cuando se define el pr
 **Análisis de métricas:**
 Si se utiliza una gestión del proyecto ágil (por ejemplo kanban) debe analizarse en cada retrospectiva las métricas asociadas para conseguir feedback rápido y poder instrumentar las mejoras identificadas.
 
-**Informe de la retrospectiva**
+## Informe de la retrospectiva
 Finalmente, realizamos la retrospectiva utilizando nuevamente el método DAKI (drop, add, keep, improve) para reflexionar sobre nuestro proceso de trabajo y encontrar áreas en las que podríamos mejorar.
 
 En esta ocasión también se procedió a dejar un tiempo para que cada integrante llene las tarjetas como les quede cómodo, y luego al momento de la conversación se fue complementando cada una de las notas con más detalle, a efecto de que se refleje en el tablero lo conversado en la retrospectiva.
