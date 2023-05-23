@@ -8,4 +8,3 @@ Esta carpeta contiene todo los productos generados en la cuarta iteración del o
 - [Metricas de DevOps](../Entrega%204/Metricas/Metricas.pdf)
 - [Video de demostración al PO](https://fi365-my.sharepoint.com/:v:/g/personal/ha196991_fi365_ort_edu_uy/EQ6cg1oJ9ZNAk_tiBLbFzNkBc_wufT0Ex-IOVVUGKnIAiQ?email=DS223427%40fi365.ort.edu.uy)
 - [Video de la retrospectiva](https://fi365-my.sharepoint.com/:v:/g/personal/ha196991_fi365_ort_edu_uy/EWCKKDuGD5dLlq_Yly2rGx0BkwezyvYUZapYvCmuJho3Rg?email=DS223427%40fi365.ort.edu.uy)
-
