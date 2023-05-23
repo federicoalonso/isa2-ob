@@ -1,6 +1,6 @@
 # Cálculo de métricas de DevOps
 
-Se presenta el cálculo de las métricas asociadas a cada una de las diferentes iteraciones:
+Se presenta el cálculo de las métricas asociadas a cada una de las diferentes entregas:
 
 - [Métricas Primera Entrega](M%C3%A9tricas%20Primera%20Entrega.pdf)
 - [Métricas Segunda Entrega](M%C3%A9tricas%20Segunda%20Entrega.pdf)

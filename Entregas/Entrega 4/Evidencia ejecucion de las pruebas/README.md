@@ -29,7 +29,7 @@ Organizamos la separación de los tests en 7 suites distintas:
 
 - Modificar concierto
 
-Las pruebas implementadas y ejecutadas en cada una corresponden a los distintos escenarios de las tarjetas escritas en formato BDD realizadas para la tercer entrega, las que pueden encontrarse siguiendo los siguientes enlaces:
+Las pruebas implementadas y ejecutadas en cada una corresponden a los distintos escenarios de las tarjetas escritas en formato BDD realizadas para la tercera entrega, las que pueden encontrarse siguiendo los siguientes enlaces:
 
 - [Add Snack Card](../../Entrega%203/Cards%20BDD/Add%20Snack%20Card.md)
 - [Buy Snack Card](../../Entrega%203/Cards%20BDD/Buy%20Snack%20Card.md)
