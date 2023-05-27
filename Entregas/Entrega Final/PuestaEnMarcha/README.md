@@ -10,6 +10,8 @@ Para el correcto funcionamiento del proyecto, se debe tener la base de datos res
 
 Se debe mover la carpeta que se encuentra en `assets\files\ArenaGestorExtensions` a la carpeta `C:\ArenaGestorExtensions` para que el proyecto se pueda ejecutar correctamente, sobre todo la sección de la API que se encarga de la generación de archivos. Como opción se puede ejecutar el archivo GenerarCarpeta.bat que se encuentra en esta carpeta para que se realice la copia de la carpeta automáticamente.
 
+![image](./assets/img/contenido.PNG)
+
 Para correr pruebas unitarias sin el IDE, tenemos configurado el pipeline de Github Actions, el cual se encarga de ejecutar las pruebas unitarias. Para ejecutar las pruebas unitarias en el ambiente local se recomienda abrir el IDE y realizarlo, pero también se puede ejecutar el siguiente comando en la carpeta raíz del proyecto API:
 
 ```bash
