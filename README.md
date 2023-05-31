@@ -22,3 +22,5 @@ En cada directorio se encontrará un nuevo archivo README.md que permitirá nave
 ## Última entrega
 
 La última entrega se encuentra en la carpeta [EntregaFinal](./Entregas/Entrega%20Final/README.md)
+
+NOTA: PARA ACCEDER A LOS LINKS DE LOS DOCUMENTOS SE RECOMIENDA DESCARGAR EL PDF
