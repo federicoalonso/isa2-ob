@@ -15,9 +15,12 @@ En cada directorio se encontrará un nuevo archivo README.md que permitirá nave
 ├──├── Entrega2
 ├──├── Entrega3
 ├──├── Entrega4
+├──├── EntregaFinal
 ├── Recursos # Recursos utilizados en el proyecto, BBDD, Consigna, etc.
 ```
 
 ## Última entrega
 
-La última entrega se encuentra en la carpeta [Entrega4](./Entregas/Entrega%204/README.md)
+La última entrega se encuentra en la carpeta [EntregaFinal](./Entregas/Entrega%20Final/README.md)
+
+NOTA: PARA ACCEDER A LOS LINKS DE LOS DOCUMENTOS SE RECOMIENDA DESCARGAR EL PDF
