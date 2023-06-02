@@ -1,4 +1,4 @@
-# Entrega 4
+# Entrega 5
 
 Esta carpeta contiene todo los productos generados en la entrega final del obligatorio de _Ingeniería de Software Ágil 2_. A continuación, se presentan los vínculos a cada uno de los archivos, incluyendo el informé academico final:
 
